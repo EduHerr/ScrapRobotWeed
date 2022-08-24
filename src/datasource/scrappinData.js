@@ -65,39 +65,57 @@ const getWeedCollection = async(page) => {
             await page.waitForSelector('section.container.mt-xxl');
 
             //Extraer data-details-weed
-            await page.evaluate(() => {
+            const Details = await page.evaluate(() => {
                 const name = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full h1.heading--l.mb-xs').innerText;
                 const type = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full a.mt-sm.mb-md.block').innerText;
                 const qualification = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full div.flex.justify-between.mt-sm.items-center span.pr-xs').innerText;
-                const substance = document.querySelector('div.w-full.lg div.w-full.mt-lg [aria-label="Terpene Information"] span.ml-sm');
-
-                /* _Cannabinodies */
-                const _CannabinoideControl = document.querySelectorAll('div.w-full.lg div.w-full.mt-lg span.text-xs.rounded.flex.items-center.mr-xl');
-
-                const _Cannabinoides = [];
-                //Iterrar _CannabinoideControl
-                for(let Cannabinoide of _CannabinoideControl)
-                {
-                    _Cannabinoides.push(Cannabinoide.innerText);
-                }
+                const substance = document.querySelector('[aria-label="Terpene Information"] span.ml-sm').innerText;
 
                 /* TopEffect && Aroma */
-                
+                const _TopEffectAndAromaControl = document.querySelectorAll('div.w-full.mt-lg .jsx-482093d89a00ffe3.row.mb-xl a.flex.items-center.p-sm.elevation-low.rounded div.text-xs.font-bold span.block.underline');
+                const topEffect = _TopEffectAndAromaControl[0].innerText;
+                const aroma = _TopEffectAndAromaControl[1].innerText;
 
-                /* _Sensations */
-                const _FeelingsControl = document.querySelectorAll('[id="strain-sensations-section"] div.row.mt-lg [id="Feelings-tab"] [data-testid="icon-tile-link"]');
-                const _NegativeControl = document.querySelectorAll('[id="strain-sensations-section"] div.row.mt-lg [id="Negatives-tab"] [data-testid="icon-tile-link"]');
+                // /* _Cannabinodies */
+                const _CannabinoideControl = document.querySelectorAll('div.text-xs.mb-md.flex.items-center span.text-xs.rounded.flex.items-center.mr-xl');
 
-                const _Feelings = [], _Negatives = [];
-                //Iterar _FeelingsControl
-                for(let i=0; i<_FeelingsControl.length; i++)
+                const _cannabinoides = [];
+                //Iterrar CannabinoideControl
+                for(let Cannabinoide of _CannabinoideControl)
                 {
-                    _Feelings.push(_FeelingsControl[i].innerText);
-                    _Negatives.push(_NegativesControl[i].innerText);
+                    _cannabinoides.push(Cannabinoide.innerText);
                 }
 
-                /* _Flavors */
+                /* _Flavors, _Feelings, _Negatives */
+                const _StrainEffectsFlavors = document.querySelectorAll('[id="strain-sensations-section"] div.row.mt-lg ');
+
+                const _Flavors = [], _Feelings = [], _Negatives = [];
+                //Iterar
+                let i=1;
+                for(let Strain of _StrainEffectsFlavors)
+                {
+                    //_Feelings
+                    if(i <= 3){
+                        _Feelings.push(Strain.innerText);
+                    }
+
+                    //_Negatives
+                    if(i <= 6){
+                        _Negatives.push(Strain.innerText);
+                    }
+
+                    //_Flavors
+                    if(i <= 9){
+                        _Flavors.push(Strain.innerText);
+                    }
+
+                    i++;
+                }
+
+                return { name, type, qualification, substance, topEffect, aroma, _cannabinoides, _Flavors, Effects: { _Feelings, _Negatives } };
             });
+
+            console.log(Details);
         }
     }
     catch(e){
