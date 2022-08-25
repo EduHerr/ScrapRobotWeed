@@ -25,7 +25,7 @@ module.exports.getContenidoPaginaWeb = async(Uri) => {
             //Nos dirigimos a la seccion - listado de las especies
             await page.goto(Uri + 'strains');
 
-            //
+            //Obtener detalles de todas las weedz => [1 pagina]
             await getWeedCollection(page);
         }
         
@@ -39,84 +39,117 @@ module.exports.getContenidoPaginaWeb = async(Uri) => {
 
 //@static
 const getWeedCollection = async(page) => {
+    const _Weeds = [];
+    let Details = {};
+
     try{
         //
-        await page.waitForSelector('#strain-list');
-
-        //Obtener enlaces de cada contenedor
-        const _weedEnlaces = await page.evaluate(() => {
-            const _WeedContainers = document.querySelectorAll('[data-testid="strain-list__strain-card"] a.p-md');
-
-            const _LinksDetails = [];
-            for(let WContainer of _WeedContainers)
-            {
-                _LinksDetails.push(WContainer.href);
-            }
-            return _LinksDetails;
-        });
-
-        //Iterar los enlaces para igresar y extraer data
-        for(let enlace of _weedEnlaces)
-        {
-            //Abrir -details- de cada elemento
-            await page.goto(enlace);
-
+        const obtenerWeedz = async(page) =>{
             //
-            await page.waitForSelector('section.container.mt-xxl');
+            await page.waitForSelector('#strain-list');
 
-            //Extraer data-details-weed
-            const Details = await page.evaluate(() => {
-                const name = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full h1.heading--l.mb-xs').innerText;
-                const type = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full a.mt-sm.mb-md.block').innerText;
-                const qualification = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full div.flex.justify-between.mt-sm.items-center span.pr-xs').innerText;
-                const substance = document.querySelector('[aria-label="Terpene Information"] span.ml-sm').innerText;
+            //Obtener enlaces de cada contenedor
+            const _weedEnlaces = await page.evaluate(() => {
+                const _WeedContainers = document.querySelectorAll('[data-testid="strain-list__strain-card"] a.p-md');
 
-                /* TopEffect && Aroma */
-                const _TopEffectAndAromaControl = document.querySelectorAll('div.w-full.mt-lg .jsx-482093d89a00ffe3.row.mb-xl a.flex.items-center.p-sm.elevation-low.rounded div.text-xs.font-bold span.block.underline');
-                const topEffect = _TopEffectAndAromaControl[0].innerText;
-                const aroma = _TopEffectAndAromaControl[1].innerText;
-
-                // /* _Cannabinodies */
-                const _CannabinoideControl = document.querySelectorAll('div.text-xs.mb-md.flex.items-center span.text-xs.rounded.flex.items-center.mr-xl');
-
-                const _cannabinoides = [];
-                //Iterrar CannabinoideControl
-                for(let Cannabinoide of _CannabinoideControl)
+                const _LinksDetails = [];
+                for(let WContainer of _WeedContainers)
                 {
-                    _cannabinoides.push(Cannabinoide.innerText);
+                    _LinksDetails.push(WContainer.href);
                 }
-
-                /* _Flavors, _Feelings, _Negatives */
-                const _StrainEffectsFlavors = document.querySelectorAll('[id="strain-sensations-section"] div.row.mt-lg ');
-
-                const _Flavors = [], _Feelings = [], _Negatives = [];
-                //Iterar
-                let i=1;
-                for(let Strain of _StrainEffectsFlavors)
-                {
-                    //_Feelings
-                    if(i <= 3){
-                        _Feelings.push(Strain.innerText);
-                    }
-
-                    //_Negatives
-                    if(i <= 6){
-                        _Negatives.push(Strain.innerText);
-                    }
-
-                    //_Flavors
-                    if(i <= 9){
-                        _Flavors.push(Strain.innerText);
-                    }
-
-                    i++;
-                }
-
-                return { name, type, qualification, substance, topEffect, aroma, _cannabinoides, _Flavors, Effects: { _Feelings, _Negatives } };
+                return _LinksDetails;
             });
 
-            console.log(Details);
-        }
+            //Iterar los enlaces [weedz] para igresar y extraer data
+            for(let enlace of _weedEnlaces)
+            {
+                //Abrir -details- de cada elemento
+                await page.goto(enlace);
+
+                //
+                await page.waitForSelector('section.container.mt-xxl');
+
+                //Extraer data-details-weed
+                Details = await page.evaluate(() => {
+                    const name = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full h1.heading--l.mb-xs').innerText;
+                    const type = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full a.mt-sm.mb-md.block').innerText;
+                    const qualification = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full div.flex.justify-between.mt-sm.items-center span.pr-xs').innerText;
+                    const substance = document.querySelector('[aria-label="Terpene Information"] span.ml-sm').innerText;
+
+                    /* TopEffect && Aroma */
+                    const _TopEffectAndAromaControl = document.querySelectorAll('div.w-full.mt-lg .jsx-482093d89a00ffe3.row.mb-xl a.flex.items-center.p-sm.elevation-low.rounded div.text-xs.font-bold span.block.underline');
+                    const topEffect = _TopEffectAndAromaControl[0].innerText;
+                    const aroma = _TopEffectAndAromaControl[1].innerText;
+
+                    // /* _Cannabinodies */
+                    const _CannabinoideControl = document.querySelectorAll('div.text-xs.mb-md.flex.items-center span.text-xs.rounded.flex.items-center.mr-xl');
+
+                    const _cannabinoides = [];
+                    //Iterrar CannabinoideControl
+                    for(let Cannabinoide of _CannabinoideControl)
+                    {
+                        _cannabinoides.push(Cannabinoide.innerText);
+                    }
+
+                    /* _Flavors, _Feelings, _Negatives */
+                    const _StrainEffectsFlavors = document.querySelectorAll('[id="strain-sensations-section"] div.row.mt-lg div.row [data-testid="icon-tile-link"] [data-testid="item-name"]');
+
+                    const _Flavors = [], _Feelings = [], _Negatives = [];
+                    //Iterar
+                    let i=1;
+                    for(let Strain of _StrainEffectsFlavors)
+                    {
+                        //_Feelings
+                        if(i >= 1 && i <= 3){
+                            _Feelings.push(Strain.innerText);
+                        }
+
+                        //_Negatives
+                        if(i >= 4 && i <= 6){
+                            _Negatives.push(Strain.innerText);
+                        }
+
+                        //_Flavors
+                        if(i >= 7 && i <= 9){
+                            _Flavors.push(Strain.innerText);
+                        }
+
+                        i++;
+                    }
+
+                    return { name, type, qualification, substance, topEffect, aroma, _cannabinoides, _Flavors, Effects: { _Feelings, _Negatives } };
+                });
+
+                //
+                console.log(`
+                    name: ,`+Details.name+` 
+                    type: ,`+Details.type+` 
+                    qualification: ,`+Details.qualification+` 
+                    substance: ,`+Details.substance+` 
+                    topEffect: ,`+Details.topEffect+` 
+                    aroma: ,`+Details.aroma+` 
+                    _cannabinoides: ,`+Details._cannabinoides[0]+` & `+Details._cannabinoides[1]+` 
+                    _Flavors: ,`+Details._Flavors[0]+`, `+Details._Flavors[1]+`, `+Details._Flavors[2]+`
+                `);
+
+                //Guardar objeto en coleccion
+                _Weeds.push(Details);
+            }
+
+            //Obtener el boton de [Next] del paginador
+            const NextButtonPaginator = await page.evaluate(() => { return document.querySelector('a.text-green [data-testid="next"]').href; });
+
+            //
+            if(NextButtonPaginator){
+                //Navegar en el paginador hasta que se acabe
+                await page.goto(NextButtonPaginator);
+                
+                //recursividad
+                return await obtenerWeedz(page);
+            }
+        };
+
+        const WeedCollection = await obtenerWeedz(page); 
     }
     catch(e){
         console.error(e);
