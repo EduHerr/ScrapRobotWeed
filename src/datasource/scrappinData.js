@@ -54,7 +54,6 @@ const getWeedCollection = async(page) => {
 
             //Obtener enlaces de cada contenedor
             const _weedEnlaces = await page.evaluate(() => {
-
                 const _WeedContainers = document.querySelectorAll('[data-testid="strain-list__strain-card"] a.p-md');
 
                 const _LinksDetails = [];
@@ -74,14 +73,9 @@ const getWeedCollection = async(page) => {
                 //
                 await page.waitForSelector('section.container.mt-xxl');
 
-                page.on("error", function (err) {  
-                    theTempValue = err.toString();
-                    console.log("Error: " + theTempValue);
-                });
-
                 //Extraer data-details-weed
                 Details = await page.evaluate(() => {
-                    let name = null, type = null, qualification = null, substance = null, topEffect = null, aroma = null, _cannabinoides = null, _Flavors = null, _Feelings = null, _Negatives = null;
+                    let name = null, type = null, qualification = null, substance = null, topEffect = null, aroma = null, _cannabinoides = null, _Flavors = null, Effects = null;
                     
                     //Name
                     name = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full h1.heading--l.mb-xs');
@@ -119,17 +113,19 @@ const getWeedCollection = async(page) => {
                     const _CannabinoideControl = document.querySelectorAll('div.text-xs.mb-md.flex.items-center span.text-xs.rounded.flex.items-center.mr-xl');
                     if(_CannabinoideControl != null){
                         //Iterrar CannabinoideControl
-                        for(let Cannabinoide of _CannabinoideControl)
-                        {
-                            _cannabinoides.push(Cannabinoide.innerText);
-                        }
+                        _CannabinoideControl.forEach((Cannabinoide, i) => {
+                            if(Cannabinoide){
+                                console.log(Cannabinoide.innerText);
+                            }
+                        });
                     }
 
                     /* _Flavors, _Feelings, _Negatives */
                     const _StrainEffectsFlavors = document.querySelectorAll('[id="strain-sensations-section"] div.row.mt-lg div.row [data-testid="icon-tile-link"] [data-testid="item-name"]') || null;
 
                     if(_StrainEffectsFlavors != null){
-                        _Flavors = [], _Feelings = [], _Negatives = [];
+                        let _Feelings = null, _Negatives = null;
+
                         //Iterar
                         let i=1;
                         for(let Strain of _StrainEffectsFlavors)
@@ -137,23 +133,28 @@ const getWeedCollection = async(page) => {
                             //_Feelings
                             if(i >= 1 && i <= 3){
                                 _Feelings.push(Strain.innerText);
+                                // console.log('Feeling: '+Strain.innerText);
                             }
 
                             //_Negatives
                             if(i >= 4 && i <= 6){
-                                _Negatives.push(Strain.innerText);
+                                // _Negatives.push(Strain.innerText);
+                                console.log('Negative: '+Strain.innerText);
                             }
 
                             //_Flavors
                             if(i >= 7 && i <= 9){
-                                _Flavors.push(Strain.innerText);
+                                // _Flavors.push(Strain.innerText);
+                                console.log('Flavor: '+Strain.innerText);
                             }
 
                             i++;
                         }
+
+                        Effects = { _Feelings, _Negatives };
                     }
 
-                    return { name, type, qualification, substance, topEffect, aroma, _cannabinoides, _Flavors, Effects: { _Feelings, _Negatives } };
+                    return { name, type, qualification, substance, topEffect, aroma, _cannabinoides, _Flavors, Effects };
                 });
 
                 //
@@ -163,7 +164,7 @@ const getWeedCollection = async(page) => {
                 _Weeds.push(Details);
                 
                 //
-                await page.waitForTimeout(5000);
+                await page.waitForTimeout(15000);
             }
 
             //Redirigir a la pagina principal-anterior para poder dar siguiente al paginador
