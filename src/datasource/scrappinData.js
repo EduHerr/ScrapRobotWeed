@@ -3,6 +3,8 @@ const { getRandom } = require('random-useragent');
 
 //@exports
 module.exports.getContenidoPaginaWeb = async(Uri) => {
+    let _WeedzCollect = [];
+
     try{
         //Obtenemos usuario/agente virtual [robot]
         const header = iniciarUsuario();
@@ -26,11 +28,14 @@ module.exports.getContenidoPaginaWeb = async(Uri) => {
             await page.goto(Uri + 'strains');
 
             //Obtener detalles de todas las weedz => [1 pagina]
-            await getWeedCollection(page);
+            _WeedzCollect = await getWeedCollection(page);
         }
         
         //
         await browser.close();
+
+        //
+        return _WeedzCollect;
     } 
     catch(e){
         console.error(e);
@@ -46,8 +51,6 @@ const getWeedCollection = async(page) => {
         //
         const obtenerWeedz = async(page) =>{
             let actualUri = await page.evaluate(() => { return window.location.href });
-
-            console.log('Uri visitada: ' +actualUri);
 
             //
             await page.waitForSelector('#strain-list');

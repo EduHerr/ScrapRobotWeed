@@ -4,10 +4,24 @@ const fs = require('fs');
 //@exports
 const descargarInformacion = async() => { /* Obtener el numero del paginado */
     try{
-        //Obtener el contenido de toda la pagina con -Scrapping-
-        const __WeedzCollection = await getContenidoPaginaWeb('https://www.leafly.com/');
+        //Validar si ya existe el respaldo de hoy
+        const validResult = await validarExistenciaHist();
 
-        //
+        if(!validResult){
+            //Obtener el contenido de toda la pagina con -Scrapping-
+            const __WeedzCollection = await getContenidoPaginaWeb('https://www.leafly.com/');
+
+            //Generar un historico/respaldo del -Scrapping- que se realizo
+            const resultHistorico = await generarHistorico(__WeedzCollection);
+
+            //Guardar la [data] en una bd Mysql
+            // if(resultHistorico){
+
+            // }
+        }
+        else{
+            throw new Error('Ya se genero el historico del dia de hoy');
+        }
     }
     catch(e){
         console.log(e);
@@ -42,15 +56,16 @@ const validarExistenciaHist = async() => {// :void
         name = name + '.json';
 
         fs.open('./src/backsource/' + name, (err) => {
-            if(err.code === 'ENOENT'){//NO EXISTE
-                resolve(true);
-            }
-            else if(err){
+            if(err){//NO EXISTE
+                if(err.code === 'ENOENT'){
+                    resolve(false);
+                }
+
                 reject(err);
             }
 
             //EXISTE
-            resolve(false);
+            resolve(true);
         });
     });
 }
@@ -60,4 +75,4 @@ const getTodayFormat = () => {// :void
     return today.getDate() + '-' + today.getMonth() + 1 + '-' + today.getFullYear();
 };
 
-module.exports = { descargarInformacion, validarExistenciaHist };
+module.exports = { descargarInformacion };
