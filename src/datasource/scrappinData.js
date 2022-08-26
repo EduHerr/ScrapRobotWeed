@@ -23,7 +23,7 @@ module.exports.getContenidoPaginaWeb = async(Uri) => {
         //
         if(result === true){
             //Nos dirigimos a la seccion - listado de las especies
-            await page.goto(Uri + 'strains?page=337');
+            await page.goto(Uri + 'strains');
 
             //Obtener detalles de todas las weedz => [1 pagina]
             await getWeedCollection(page);
@@ -158,9 +158,6 @@ const getWeedCollection = async(page) => {
                     return { name, type, qualification, substance, topEffect, aroma, _cannabinoides, _Flavors, Effects };
                 });
 
-                //
-                console.log(Details);
-
                 //Guardar objeto en coleccion
                 _Weeds.push(Details);
 
@@ -184,9 +181,11 @@ const getWeedCollection = async(page) => {
             }
 
             console.log('Scrap terminado');
+
+            return _Weeds;
         };
 
-        const WeedCollection = await obtenerWeedz(page); 
+        return await obtenerWeedz(page); 
     }
     catch(e){
         console.error(e);
