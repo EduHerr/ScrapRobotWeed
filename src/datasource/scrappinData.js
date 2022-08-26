@@ -8,7 +8,7 @@ module.exports.getContenidoPaginaWeb = async(Uri) => {
         const header = iniciarUsuario();
         
         //Puppeteer initialization and configuration
-        const browser = await puppeteer.launch({ /*headless: false,*/ defaultViewport: { width:1920, height:1080 } });
+        const browser = await puppeteer.launch({ defaultViewport: { width:1920, height:1080 } });
         const page = await browser.newPage();
 
         //Simulamos la visita de usuario a pagina, mandando el UserAgent
@@ -23,7 +23,7 @@ module.exports.getContenidoPaginaWeb = async(Uri) => {
         //
         if(result === true){
             //Nos dirigimos a la seccion - listado de las especies
-            await page.goto(Uri + 'strains?page=3');
+            await page.goto(Uri + 'strains?page=337');
 
             //Obtener detalles de todas las weedz => [1 pagina]
             await getWeedCollection(page);
@@ -79,52 +79,52 @@ const getWeedCollection = async(page) => {
                     
                     //Name
                     name = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full h1.heading--l.mb-xs');
-                    if(Object.entries(name).length > 0){
+                    if(name != null && typeof name != 'undefined'){
                         name = name.innerText;
                     }
 
                     //Type
                     type = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full a.mt-sm.mb-md.block');
-                    if(typeof name != 'undefined' || Object.entries(type).length > 0){
+                    if(type != null && typeof type != 'undefined'){
                         type = type.innerText;
                     }
 
                     //Qualification
                     qualification = document.querySelector('div.StrainPage_leftHalfSpacing__ClDsd.w-full div.flex.justify-between.mt-sm.items-center span.pr-xs');
-                    if(Object.entries(qualification).length > 0 || typeof name != 'undefined'){
+                    if(qualification != null && typeof qualification != 'undefined'){
                         qualification = qualification.innerText;
                     }
 
                     //Substance
                     substance = document.querySelector('div.text-xs.mb-md.flex.items-center span.ml-sm');
-                    if(Object.entries(substance).length > 0 || typeof name != 'undefined'){
+                    if(substance != null && typeof substance != 'undefined'){
                         substance = substance.innerText;
                     }
 
 
-                    /* TopEffect && Aroma */
+                    /* TopEffect && Flavor&Aroma */
                     const _TopEffectAndAromaControl = document.querySelectorAll('div.w-full.mt-lg .jsx-482093d89a00ffe3.row.mb-xl a.flex.items-center.p-sm.elevation-low.rounded div.text-xs.font-bold span.block.underline');
                     if(_TopEffectAndAromaControl.length > 0){
                         topEffect = _TopEffectAndAromaControl[0];
-                        topEffect = Object.entries(topEffect).length > 0 || typeof name != 'undefined' ? topEffect.innerText : '';
+                        topEffect = topEffect != null && typeof name != 'undefined' ? topEffect.innerText : '';
 
                         aroma = _TopEffectAndAromaControl[1];
-                        aroma = Object.entries(aroma).length > 0 || typeof name != 'undefined' ? aroma.innerText : '';
+                        aroma = aroma != null && typeof aroma != 'undefined' ? aroma.innerText : '';
                     }
 
-                    /* _Cannabinodies */
+                    // /* _Cannabinodies */
                     const _CannabinoideControl = document.querySelectorAll('div.text-xs.mb-md.flex.items-center span.text-xs.rounded.flex.items-center.mr-xl');
                     if(_CannabinoideControl.length > 0){
                         //Iterrar CannabinoideControl
                         for(let Cannabinoide of _CannabinoideControl)
                         {
-                            if(Object.entries(Cannabinoide).length > 0){
+                            if(Object.entries(Cannabinoide).length > 0 || typeof name != 'undefined'){
                                 _cannabinoides.push(Cannabinoide.innerText);
                             }
                         }
                     }
 
-                    /* _Flavors, _Feelings, _Negatives */
+                    // /* _Flavors, _Feelings, _Negatives */
                     const _StrainEffectsFlavors = document.querySelectorAll('[id="strain-sensations-section"] div.row.mt-lg div.row [data-testid="icon-tile-link"] [data-testid="item-name"]') || null;
 
                     if(_StrainEffectsFlavors.length > 0){
@@ -137,19 +137,16 @@ const getWeedCollection = async(page) => {
                             //_Feelings
                             if(i >= 1 && i <= 3){
                                 _Feelings.push(Strain.innerText);
-                                // console.log('Feeling: '+Strain.innerText);
                             }
 
                             //_Negatives
                             if(i >= 4 && i <= 6){
                                 _Negatives.push(Strain.innerText);
-                                console.log('Negative: '+Strain.innerText);
                             }
 
                             //_Flavors
                             if(i >= 7 && i <= 9){
                                 _Flavors.push(Strain.innerText);
-                                console.log('Flavor: '+Strain.innerText);
                             }
 
                             i++;
@@ -166,6 +163,8 @@ const getWeedCollection = async(page) => {
 
                 //Guardar objeto en coleccion
                 _Weeds.push(Details);
+
+                await page.waitForTimeout(2000);
             }
 
             //Redirigir a la pagina principal-anterior para poder dar siguiente al paginador
@@ -173,16 +172,18 @@ const getWeedCollection = async(page) => {
             await page.waitForSelector('.flex.justify-between.my-xl.w-100');
 
             //Obtener el boton de [Next] del paginador
-            const NextButtonPaginator = await page.evaluate(() => { return document.querySelector('[data-testid="next"]').href; });
+            const NextButtonPaginator = await page.evaluate(() => { return document.querySelector('[data-testid="next"]'); });
 
             //
-            if(NextButtonPaginator){
+            if(NextButtonPaginator != null && typeof NextButtonPaginator != 'undefined'){
                 //Navegar en el paginador hasta que se acabe
-                await page.goto(NextButtonPaginator);
+                await page.goto(NextButtonPaginator.href);
                 
                 //recursividad
                 return await obtenerWeedz(page);
             }
+
+            console.log('Scrap terminado');
         };
 
         const WeedCollection = await obtenerWeedz(page); 
