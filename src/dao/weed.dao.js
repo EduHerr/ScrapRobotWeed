@@ -30,14 +30,14 @@ const descargarInformacion = async() => { /* Obtener el numero del paginado */
     }
 };
 /* MySQL */
-const save = async(data) => {
+const save = (data) => {
     const { name, qualification, type, topEffect, flavorAroma, substance } = data;
 
     try{
         return new Promise((resolve, reject) => {
-            conn.query('CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)', [1, name, qualification, type, topEffect, flavorAroma, substance], (err, result) => {
+            conn.query('CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)', [1, name, qualification, type, topEffect, flavorAroma, substance], function(err, results, fields){
                 if(!err){
-                    resolve(result[0]);
+                    resolve(results[0]);
                 }
 
                 reject('Error al intentar insertar *Feeling: ' + err.message);
@@ -49,15 +49,17 @@ const save = async(data) => {
     }
 };
 
-const read = async() => {
+const read = () => {
     try{
         return new Promise((resolve, reject) => {
-            conn.query('CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)', [3, NULL, NULL, NULL, NULL, NULL, NULL], (err, rows) => {
+            conn.query('CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)', [0, NULL, NULL, NULL, NULL, NULL, NULL], (err, rows) => {
                 if(!err){
-                    if(rows[0].length > 0){
-                        resolve(rows[0]);
-                    }
-                    reject('No hay -Weedz- registradas');
+                    console.log(rows);
+
+                    // if(rows[0].length > 0){
+                    //     resolve(rows[0]);
+                    // }
+                    // reject('No hay -Weedz- registradas');
                 }
 
                 reject('Error al intentar insertar *Feeling: ' + err.message);
@@ -65,7 +67,7 @@ const read = async() => {
         });
     }
     catch(error){
-        throw 'Error in MySql:' +error.message;
+        throw 'Error in MySql:' +error;
     }
 };
 

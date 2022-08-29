@@ -9,7 +9,7 @@ const descargarInfo = async() => {
         const _WeedzCollection = await DAOWeed.descargarInformacion();
 
         //Iterar la coleccion para extraer los fragmentos de data e insertarlos en sus respectivas tablas
-        _WeedzCollection.filter((Weed) => {
+        _WeedzCollection.filter(async (Weed) => {
             /*[SQL] - Insertar Weed */
             const _IdWeed = await DAOWeed.save({
                 name: Weed.name,
@@ -20,8 +20,8 @@ const descargarInfo = async() => {
             });
 
             //Validar que traiga _cannabinoides
-            if(Weed._cannabinoides != null){
-                Weed._cannabinoides.forEach((cannabinoide) => {
+            if(Weed._cannabinoides != null || Weed._cannabinoides != []){
+                Weed._cannabinoides.forEach(async (cannabinoide) => {
                     await DAOCannabinoide.save({
                         _idWeed: _IdWeed,
                         cannabinoide
@@ -30,8 +30,8 @@ const descargarInfo = async() => {
             }
             
             //Validar que traiga _flavors
-            if(Weed._Flavors != null){
-                Weed._Flavors.forEach((flavor) => {
+            if(Weed._Flavors != null || Weed._cannabinoides != []){
+                Weed._Flavors.forEach(async (flavor) => {
                     await DAOFlavor.save({
                         _idWeed: _IdWeed,
                         name: flavor
@@ -40,11 +40,11 @@ const descargarInfo = async() => {
             }
 
             //Validar que traiga _Effects
-            if(Weed.Effects != null){
+            if(Weed.Effects != null || Weed.Effects != []){
                 Weed.Effects.forEach((Effect) => {
                     //Validar _Feelings
-                    if(Effect._Feelings){
-                        Effect._Feelings.forEach((Feeling) => {
+                    if(Effect._Feelings != null || Weed._Feelings != []){
+                        Effect._Feelings.forEach(async (Feeling) => {
                             await DAOFeeling.save({
                                 _idWeed: _IdWeed,
                                 name: Feeling
@@ -53,8 +53,8 @@ const descargarInfo = async() => {
                     }
 
                     //Validar _Negatives
-                    if(Effect._Negatives){
-                        Effect._Negatives.forEach((Negative) => {
+                    if(Effect._Negatives != null || Weed._Negatives != []){
+                        Effect._Negatives.forEach(async (Negative) => {
                             await DAONegative.save({
                                 _idWeed: _IdWeed,
                                 name: Negative
@@ -77,7 +77,7 @@ const leerColeccion = async () => {
         const _Weedz = await DAOWeed.read();
 
         //Iterar
-        const _WeedsCollection = _Weedz.forEach((Weed, i) => {
+        const _WeedsCollection = _Weedz.forEach(async (Weed, i) => {
             const _collection = [];
 
             const _cannabinoides = await DAOCannabinoide.read(Weed._id);

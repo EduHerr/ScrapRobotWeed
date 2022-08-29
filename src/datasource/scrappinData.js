@@ -10,7 +10,7 @@ module.exports.getContenidoPaginaWeb = async(Uri) => {
         const header = iniciarUsuario();
         
         //Puppeteer initialization and configuration
-        const browser = await puppeteer.launch({ /*headless: false,*/ defaultViewport: { width:1920, height:1080 } });
+        const browser = await puppeteer.launch({ defaultViewport: { width:1920, height:1080 } });
         const page = await browser.newPage();
 
         //Simulamos la visita de usuario a pagina, mandando el UserAgent
@@ -46,8 +46,9 @@ module.exports.getContenidoPaginaWeb = async(Uri) => {
 const getWeedCollection = async(page) => {
     const _Weeds = [];
     let Details = {};
+    let lastPaginator = 0;
 
-    let x=0;
+    let x = 0;
 
     try{
         //
@@ -58,6 +59,18 @@ const getWeedCollection = async(page) => {
 
             //
             await page.waitForSelector('#strain-list');
+
+            //Obtener el ultimo numero del paginador
+            if(lastPaginator === 0){
+                lastPaginator = await page.evaluate(() => {
+                    let numberPaginator; //Number
+
+                    numberPaginator = document.querySelector('[data-testid="page"]').innerText; //String
+                    numberPaginator = numberPaginator.substring(numberPaginator.length - 3); //Obtener los ultimos 3 caracteres del string, que contiene el numero tope del paginador
+                    numberPaginator = parseInt(numberPaginator); //Parceo a numero
+                    return numberPaginator;
+                });
+            }
 
             //Obtener enlaces de cada contenedor
             const _weedEnlaces = await page.evaluate(() => {
@@ -195,7 +208,7 @@ const getWeedCollection = async(page) => {
             //Borrar
             x++;
 
-            if(x < 15){
+            if(x < 8){
                 //Validamos existencia del boton para redireccionarnos a la siguiente pagina
                 if(NextButtonPaginator != false){
                     //
