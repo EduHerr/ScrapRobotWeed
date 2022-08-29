@@ -10,7 +10,7 @@ module.exports.getContenidoPaginaWeb = async(Uri) => {
         const header = iniciarUsuario();
         
         //Puppeteer initialization and configuration
-        const browser = await puppeteer.launch({ defaultViewport: { width:1920, height:1080 } });
+        const browser = await puppeteer.launch({ /*headless: false,*/ defaultViewport: { width:1920, height:1080 } });
         const page = await browser.newPage();
 
         //Simulamos la visita de usuario a pagina, mandando el UserAgent
@@ -47,10 +47,14 @@ const getWeedCollection = async(page) => {
     const _Weeds = [];
     let Details = {};
 
+    let x=0;
+
     try{
         //
         const obtenerWeedz = async(page) =>{
             let actualUri = await page.evaluate(() => { return window.location.href });
+
+            console.log('Pagina visitada: ' +actualUri);
 
             //
             await page.waitForSelector('#strain-list');
@@ -71,7 +75,7 @@ const getWeedCollection = async(page) => {
             for(let enlace of _weedEnlaces)
             {
                 //Abrir -details- de cada elemento
-                await page.goto(enlace);
+                await page.goto(enlace, [1000, { waitUntil: "domcontentloaded" }]);
 
                 //
                 await page.waitForSelector('section.container.mt-xxl');
@@ -168,27 +172,54 @@ const getWeedCollection = async(page) => {
             }
 
             //Redirigir a la pagina principal-anterior para poder dar siguiente al paginador
-            await page.goto(actualUri);
+            await page.goto(actualUri, [1000, { waitUntil: "domcontentloaded" }]);
+
+            //Esperaos a que el control sea renderisado en el DOM
             await page.waitForSelector('.flex.justify-between.my-xl.w-100');
 
             //Obtener el boton de [Next] del paginador
-            const NextButtonPaginator = await page.evaluate(() => { return document.querySelector('[data-testid="next"]'); });
-
-            //
-            if(NextButtonPaginator != null && typeof NextButtonPaginator != 'undefined'){
-                //Navegar en el paginador hasta que se acabe
-                await page.goto(NextButtonPaginator.href);
+            const NextButtonPaginator = await page.evaluate(() => { 
+                //Obtenemos el boton -Next-
+                let NextButton = document.querySelector('[data-testid="next"]');
                 
-                //recursividad
-                return await obtenerWeedz(page);
+                //Validamos que si se haya seleccionado algo
+                if(NextButton != null && typeof NextButton !== 'undefined'){
+                    NextButton = NextButton.href;
+                    return NextButton;
+                }
+                else{ //En caso de que ya no exista el boton -Next-. Hemos llegado al final del paginado
+                    return false;
+                }
+            });
+
+            //Borrar
+            x++;
+
+            if(x < 15){
+                //Validamos existencia del boton para redireccionarnos a la siguiente pagina
+                if(NextButtonPaginator != false){
+                    //
+                    console.log('NextButton href:' +NextButtonPaginator);
+
+                    //Navegar a la siguiente pagina [Recorre paginador]
+                    await page.goto(NextButtonPaginator, [2000, { waitUntil: "domcontentloaded" }]);
+
+                    //recursividad
+                    return await obtenerWeedz(page);
+                }
+                else{
+                    console.log('Scrap terminado');
+                }
+            }
+            else{
+                console.log('Scrap terminado');
             }
 
-            console.log('Scrap terminado');
-
-            return _Weeds;
         };
 
-        return await obtenerWeedz(page); 
+        await obtenerWeedz(page); 
+
+        return _Weeds;
     }
     catch(e){
         console.error(e);

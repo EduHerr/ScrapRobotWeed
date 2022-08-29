@@ -1,8 +1,8 @@
-const { getNumeroPaginas } = require('../dao/weed.dao');
+const { descargarInformacion } = require('../dao/weed.dao');
 
 const obtenerPaginado = async() => {
     try{
-        return await getNumeroPaginas();
+        return await descargarInformacion();
     }
     catch(e){
         consolo.log(e);

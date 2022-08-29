@@ -2,6 +2,7 @@ const { getContenidoPaginaWeb } = require('../datasource/scrappinData');
 const fs = require('fs');
 
 //@exports
+/* Scrapper */
 const descargarInformacion = async() => { /* Obtener el numero del paginado */
     try{
         //Validar si ya existe el respaldo de hoy
@@ -26,9 +27,19 @@ const descargarInformacion = async() => { /* Obtener el numero del paginado */
     catch(e){
         console.log(e);
     }
-}
+};
+/* MySQL */
+const save = async(data) => {
+    try{
+        
+    }
+    catch(error){
+        throw 'Error in MySql:' +error.message;
+    }
+};
 
 //@static
+/* Scrapper */
 const generarHistorico = async(_Collection) => { /* Genera un historico en JSON, en un archivo... De lo -Scrappeado- */
     //Escribir documento JSON
     return new Promise((resolve, reject) => {
@@ -48,7 +59,7 @@ const generarHistorico = async(_Collection) => { /* Genera un historico en JSON,
             reject(err);
         });
     });
-}
+};
 
 const validarExistenciaHist = async() => {// :void
     return new Promise((resolve, reject) => {
@@ -68,7 +79,7 @@ const validarExistenciaHist = async() => {// :void
             resolve(true);
         });
     });
-}
+};
 
 const getTodayFormat = () => {// :void
     let today = new Date();
