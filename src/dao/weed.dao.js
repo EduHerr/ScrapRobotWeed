@@ -1,5 +1,6 @@
 const { getContenidoPaginaWeb } = require('../datasource/scrappinData');
 const fs = require('fs');
+const conn = require('../../configuration/database');
 
 //@exports
 /* Scrapper */
@@ -15,10 +16,10 @@ const descargarInformacion = async() => { /* Obtener el numero del paginado */
             //Generar un historico/respaldo del -Scrapping- que se realizo
             const resultHistorico = await generarHistorico(__WeedzCollection);
 
-            //Guardar la [data] en una bd Mysql
-            // if(resultHistorico){
-
-            // }
+            //
+            if(resultHistorico){
+                return __WeedzCollection; 
+            }
         }
         else{
             throw new Error('Ya se genero el historico del dia de hoy');
@@ -30,8 +31,38 @@ const descargarInformacion = async() => { /* Obtener el numero del paginado */
 };
 /* MySQL */
 const save = async(data) => {
+    const { name, qualification, type, topEffect, flavorAroma, substance } = data;
+
     try{
-        
+        return new Promise((resolve, reject) => {
+            conn.query('CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)', [1, name, qualification, type, topEffect, flavorAroma, substance], (err, result) => {
+                if(!err){
+                    resolve(result[0]);
+                }
+
+                reject('Error al intentar insertar *Feeling: ' + err.message);
+            });
+        });
+    }
+    catch(error){
+        throw 'Error in MySql:' +error.message;
+    }
+};
+
+const read = async() => {
+    try{
+        return new Promise((resolve, reject) => {
+            conn.query('CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)', [3, NULL, NULL, NULL, NULL, NULL, NULL], (err, rows) => {
+                if(!err){
+                    if(rows[0].length > 0){
+                        resolve(rows[0]);
+                    }
+                    reject('No hay -Weedz- registradas');
+                }
+
+                reject('Error al intentar insertar *Feeling: ' + err.message);
+            });
+        });
     }
     catch(error){
         throw 'Error in MySql:' +error.message;
@@ -86,4 +117,4 @@ const getTodayFormat = () => {// :void
     return today.getDate() + '-' + today.getMonth() + 1 + '-' + today.getFullYear();
 };
 
-module.exports = { descargarInformacion };
+module.exports = { descargarInformacion, save, read };

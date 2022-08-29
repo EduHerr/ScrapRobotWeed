@@ -7,8 +7,8 @@ router.use(express.json());
 
 router.get('/', (req, res) => { res.json( "WeedStrains API" ) });
 
-router.get('/obtenerTipos', (req, res) => {
-    weedController.obtenerPaginado()
+router.get('/downloadInfo', (req, res) => {
+    weedController.descargarInfo()
     .then(result => res.json({ status: 200, message: result }))
     .catch(error => res.json({ status: 500, message: error }))
 });
