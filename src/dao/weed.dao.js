@@ -31,13 +31,13 @@ const descargarInformacion = async() => { /* Obtener el numero del paginado */
 };
 /* MySQL */
 const save = (data) => {
-    const { name, qualification, type, topEffect, flavorAroma, substance } = data;
+    const { name, qualification, type, topEffect, aroma, substance } = data;
 
     try{
         return new Promise((resolve, reject) => {
-            conn.query("CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)", [1, name, qualification, type, topEffect, flavorAroma, substance], (err, rows) => {
+            conn.query("CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)", [1, name, qualification, type, topEffect, aroma, substance], (err, rows) => {
                 if(!err){
-                    resolve(rows[0]);
+                    resolve(rows[0][0]);
                 }
                 else{
                     reject('Error al intentar insertar *Feeling: ' + err.message);

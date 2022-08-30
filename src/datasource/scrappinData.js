@@ -46,31 +46,16 @@ module.exports.getContenidoPaginaWeb = async(Uri) => {
 const getWeedCollection = async(page) => {
     const _Weeds = [];
     let Details = {};
-    let lastPaginator = 0;
 
-    let x = 0;
+    let x=0;
 
     try{
         //
         const obtenerWeedz = async(page) =>{
             let actualUri = await page.evaluate(() => { return window.location.href });
-
-            console.log('Pagina visitada: ' +actualUri);
-
+            
             //
             await page.waitForSelector('#strain-list');
-
-            //Obtener el ultimo numero del paginador
-            if(lastPaginator === 0){
-                lastPaginator = await page.evaluate(() => {
-                    let numberPaginator; //Number
-
-                    numberPaginator = document.querySelector('[data-testid="page"]').innerText; //String
-                    numberPaginator = numberPaginator.substring(numberPaginator.length - 3); //Obtener los ultimos 3 caracteres del string, que contiene el numero tope del paginador
-                    numberPaginator = parseInt(numberPaginator); //Parceo a numero
-                    return numberPaginator;
-                });
-            }
 
             //Obtener enlaces de cada contenedor
             const _weedEnlaces = await page.evaluate(() => {
@@ -120,7 +105,6 @@ const getWeedCollection = async(page) => {
                     if(substance != null && typeof substance != 'undefined'){
                         substance = substance.innerText;
                     }
-
 
                     /* TopEffect && Flavor&Aroma */
                     const _TopEffectAndAromaControl = document.querySelectorAll('div.w-full.mt-lg .jsx-482093d89a00ffe3.row.mb-xl a.flex.items-center.p-sm.elevation-low.rounded div.text-xs.font-bold span.block.underline');
@@ -180,8 +164,6 @@ const getWeedCollection = async(page) => {
 
                 //Guardar objeto en coleccion
                 _Weeds.push(Details);
-
-                await page.waitForTimeout(2000);
             }
 
             //Redirigir a la pagina principal-anterior para poder dar siguiente al paginador
@@ -205,29 +187,18 @@ const getWeedCollection = async(page) => {
                 }
             });
 
-            //Borrar
-            x++;
-
-            if(x < 8){
+            if(x < 5){
                 //Validamos existencia del boton para redireccionarnos a la siguiente pagina
                 if(NextButtonPaginator != false){
-                    //
-                    console.log('NextButton href:' +NextButtonPaginator);
-
                     //Navegar a la siguiente pagina [Recorre paginador]
                     await page.goto(NextButtonPaginator, [2000, { waitUntil: "domcontentloaded" }]);
+
+                    x++;
 
                     //recursividad
                     return await obtenerWeedz(page);
                 }
-                else{
-                    console.log('Scrap terminado');
-                }
             }
-            else{
-                console.log('Scrap terminado');
-            }
-
         };
 
         await obtenerWeedz(page); 

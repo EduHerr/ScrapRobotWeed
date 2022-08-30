@@ -1,16 +1,17 @@
 const conn = require('../../configuration/database');
 
 const save = async (data) => {
-    const { _idWeed, name } = data;
+    const { _idWeed, feeling } = data;
 
     try{
         return new Promise((resolve, reject) => {
-            conn.query("CALL SP_FEELING(?, ?, ?, ?)", [1, null, _idWeed, name], (err, result) => {
+            conn.query("CALL SP_FEELING(?, ?, ?)", [1, _idWeed, feeling], (err, result) => {
                 if(!err){
-                    return result;
+                    resolve();
                 }
-
-                throw 'Error al intentar insertar *Feeling: ' + err.message;
+                else{
+                    reject('Error al intentar insertar *Feeling: ' + err.message);
+                }
             });
         });
     }
@@ -22,12 +23,14 @@ const save = async (data) => {
 const read = async (_idWeed) => {
     try{
         return new Promise((resolve, reject) => {
-            conn.query("CALL SP_FEELING(?, ?, ?, ?)", [1, null, _idWeed, null], (err, rows) => {
+            conn.query("CALL SP_FEELING(?, ?, ?)", [1, _idWeed, null], (err, rows) => {
                 if(!err){
-                    return rows[0].length > 0 ? rows[0] : null;
+                    let result = rows[0].length > 0 ? rows[0] : null;
+                    resolve(result);
                 }
-
-                throw 'Error al intentar leer *Feeling: '+ err.message;
+                else{
+                    reject('Error al intentar leer *Feeling: '+ err.message);
+                }
             });
         });
     }
@@ -36,4 +39,4 @@ const read = async (_idWeed) => {
     }
 };
 
-module.exports = { save, read };
+module.exports = { save, read };    
