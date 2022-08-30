@@ -18,6 +18,4 @@ conn.connect(function (err){
 	}
 });
 
-conn.end();
-
 module.exports = conn;

@@ -4,70 +4,73 @@ const DAOFlavor = require('../dao/flavor.dao');
 const DAOFeeling = require('../dao/feeling.dao');
 const DAONegative = require('../dao/negative.dao');
 
+const fs = require('fs').promises;
+
 const descargarInfo = async() => {
     try{
-        const _WeedzCollection = await DAOWeed.descargarInformacion();
+        // const _WeedzCollection = await DAOWeed.descargarInformacion();
+        
+        ///Borrar
+        const _WeedzCollection = JSON.parse(await fs.readFile('./src/backsource//29-71-2022.json', 'utf8'));
 
         //Iterar la coleccion para extraer los fragmentos de data e insertarlos en sus respectivas tablas
-        _WeedzCollection.filter(async (Weed) => {
+        for(let Weed of _WeedzCollection)
+        {
+            let { name, type, qualification, substance, topEffect, aroma, _cannabinoides, _Flavors, _Feelings, _Negatives } = Weed;
+            
             /*[SQL] - Insertar Weed */
-            const _IdWeed = await DAOWeed.save({
-                name: Weed.name,
-                type: Weed.type,
-                substance: Weed.substance,
-                topEffect: Weed.topEffect,
-                aroma: Weed.aroma
-            });
+            const _IdWeed = await DAOWeed.save({ name, type, qualification, substance, topEffect, aroma });
 
             //Validar que traiga _cannabinoides
-            if(Weed._cannabinoides != null || Weed._cannabinoides != []){
-                Weed._cannabinoides.forEach(async (cannabinoide) => {
+            if(_cannabinoides != null || _cannabinoides != []){
+                for(let cannabinoide of _cannabinoides)
+                {
                     await DAOCannabinoide.save({
                         _idWeed: _IdWeed,
                         cannabinoide
                     });
-                });
+                }
             }
             
             //Validar que traiga _flavors
-            if(Weed._Flavors != null || Weed._cannabinoides != []){
-                Weed._Flavors.forEach(async (flavor) => {
+            if(_Flavors != null || _Flavors != []){
+                for(let flavor of _Flavors)
+                {
                     await DAOFlavor.save({
                         _idWeed: _IdWeed,
                         name: flavor
                     });
-                });
+                }
             }
 
             //Validar que traiga _Effects
-            if(Weed.Effects != null || Weed.Effects != []){
-                Weed.Effects.forEach((Effect) => {
-                    //Validar _Feelings
-                    if(Effect._Feelings != null || Weed._Feelings != []){
-                        Effect._Feelings.forEach(async (Feeling) => {
-                            await DAOFeeling.save({
-                                _idWeed: _IdWeed,
-                                name: Feeling
-                            });
-                        });
-                    }
-
-                    //Validar _Negatives
-                    if(Effect._Negatives != null || Weed._Negatives != []){
-                        Effect._Negatives.forEach(async (Negative) => {
-                            await DAONegative.save({
-                                _idWeed: _IdWeed,
-                                name: Negative
-                            });
-                        });
-                    }
-                });
+            //Validar _Feelings
+            if(_Feelings != null || _Feelings != []){
+                for(let feeling of _Feelings)
+                {
+                    await DAOFeeling.save({
+                        _idWeed: _IdWeed,
+                        name: feeling
+                    });
+                }
             }
-        });
+
+            //Validar _Negatives
+            if(_Negatives != null || _Negatives != []){
+                for(let negative of _Negatives)
+                {
+                    await DAONegative.save({
+                        _idWeed: _IdWeed,
+                        name: negative
+                    });
+                }
+            }
+        }
 
         return 'Info descargada y guardada en la base de datos!!'
     }
     catch(e){
+        console.log(e);
         throw new Error(e);
     }
 }

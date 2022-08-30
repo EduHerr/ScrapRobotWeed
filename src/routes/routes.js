@@ -16,10 +16,4 @@ router.get('/downloadInfo', (req, res) => {
     .catch(error => res.json({ status: 500, message: error }))
 });
 
-router.get('/crear', (req, res) => {
-    weedDao.read()
-    .then(result => res.json({ status: 200, message: result }))
-    .catch(error => res.json({ status: 500, message: error }))
-});
-
 module.exports = router;

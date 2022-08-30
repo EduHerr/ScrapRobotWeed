@@ -35,12 +35,13 @@ const save = (data) => {
 
     try{
         return new Promise((resolve, reject) => {
-            conn.query('CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)', [1, name, qualification, type, topEffect, flavorAroma, substance], function(err, results, fields){
+            conn.query("CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)", [1, name, qualification, type, topEffect, flavorAroma, substance], (err, rows) => {
                 if(!err){
-                    resolve(results[0]);
+                    resolve(rows[0]);
                 }
-
-                reject('Error al intentar insertar *Feeling: ' + err.message);
+                else{
+                    reject('Error al intentar insertar *Feeling: ' + err.message);
+                }
             });
         });
     }
@@ -52,17 +53,18 @@ const save = (data) => {
 const read = () => {
     try{
         return new Promise((resolve, reject) => {
-            conn.query('CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)', [0, NULL, NULL, NULL, NULL, NULL, NULL], (err, rows) => {
+            conn.query("CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)", [0, null, null, null, null, null, null], (err, rows) => {
                 if(!err){
-                    console.log(rows);
-
-                    // if(rows[0].length > 0){
-                    //     resolve(rows[0]);
-                    // }
-                    // reject('No hay -Weedz- registradas');
+                    if(rows[0].length > 0){
+                        resolve(rows[0]);
+                    }
+                    else{
+                        reject('No hay -Weedz- registradas');
+                    }
                 }
-
-                reject('Error al intentar insertar *Feeling: ' + err.message);
+                else{
+                    reject('Error al leer *WeedDao: ' + err.message);
+                }
             });
         });
     }
