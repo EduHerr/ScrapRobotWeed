@@ -10,9 +10,9 @@ const guardar = async(data) => {
     }
 }
 
-const leer = async() => {
+const leer = async(_id) => {
     try{
-        const result = await DAOFlavor.read();
+        const result = await DAOFlavor.read(_id);
         return result;
     } 
     catch(err){

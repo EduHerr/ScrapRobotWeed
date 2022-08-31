@@ -10,9 +10,9 @@ const guardar = async(data) => {
     }
 }
 
-const leer = async() => {
+const leer = async(_id) => {
     try{
-        const result = await DAONegative.read();
+        const result = await DAONegative.read(_id);
         return result;
     } 
     catch(err){

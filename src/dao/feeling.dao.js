@@ -23,9 +23,9 @@ const save = async (data) => {
 const read = async (_idWeed) => {
     try{
         return new Promise((resolve, reject) => {
-            conn.query("CALL SP_FEELING(?, ?, ?)", [1, _idWeed, null], (err, rows) => {
+            conn.query("SELECT HEX(_id) AS _id, HEX(_idWeed) AS _idWeed, nombre FROM feeling WHERE _idWeed = UNHEX(?)", [_idWeed], (err, rows) => {
                 if(!err){
-                    let result = rows[0].length > 0 ? rows[0] : null;
+                    let result = rows.length > 0 ? rows : null;
                     resolve(result);
                 }
                 else{

@@ -47,8 +47,6 @@ const getWeedCollection = async(page) => {
     const _Weeds = [];
     let Details = {};
 
-    let x=0;
-
     try{
         //
         const obtenerWeedz = async(page) =>{
@@ -187,17 +185,13 @@ const getWeedCollection = async(page) => {
                 }
             });
 
-            if(x < 5){
-                //Validamos existencia del boton para redireccionarnos a la siguiente pagina
-                if(NextButtonPaginator != false){
-                    //Navegar a la siguiente pagina [Recorre paginador]
-                    await page.goto(NextButtonPaginator, [2000, { waitUntil: "domcontentloaded" }]);
+            //Validamos existencia del boton para redireccionarnos a la siguiente pagina
+            if(NextButtonPaginator != false){
+                //Navegar a la siguiente pagina [Recorre paginador]
+                await page.goto(NextButtonPaginator, [2000, { waitUntil: "domcontentloaded" }]);
 
-                    x++;
-
-                    //recursividad
-                    return await obtenerWeedz(page);
-                }
+                //recursividad
+                return await obtenerWeedz(page);
             }
         };
 
@@ -206,7 +200,7 @@ const getWeedCollection = async(page) => {
         return _Weeds;
     }
     catch(e){
-        console.error(e);
+        throw e;
     }
 }
 
@@ -217,7 +211,7 @@ const iniciarUsuario = () => {
         });
     }
     catch(e){
-        console.error(e);
+        throw e;
     }
 }
 
@@ -234,8 +228,6 @@ const brincarAgeVerification = async (page, next) => {
         return true;
     }
     catch(error){
-        //Si no nos mando al verificador, seguimos...
-        console.log(error);
-        next();
+        throw e;
     }
 }

@@ -54,43 +54,41 @@ const descargarInfo = async() => {
         return 'Info descargada y guardada en la base de datos!!';
     }
     catch(e){
-        console.log(e);
         throw new Error(e);
     }
 }
 
 const leerColeccion = async () => {
+    const _collection = [];
+
     try{
         const _Weedz = await DAOWeed.read();
 
         //Iterar
-        const _WeedsCollection = _Weedz.forEach(async (Weed, i) => {
-            const _collection = [];
+        for(let x=0; x<_Weedz.length; x++)
+        {
+            
 
-            const _cannabinoides = await CannabinoideController.read(Weed._id);
-            const _Flavors = await FlavorController.read(Weed._id);
-            const _Feelings = await FeelingController.read(Weed._id);
-            const _Negatives = await NegativeController.read(Weed._id);
+            const _cannabinoides = await CannabinoideController.leer(_Weedz[x]._id);
+            const _Flavors = await FlavorController.leer(_Weedz[x]._id);
+            const _Feelings = await FeelingController.leer(_Weedz[x]._id);
+            const _Negatives = await NegativeController.leer(_Weedz[x]._id);
 
             _collection.push({
-                name: Weed.name,
-                type: Weed.type,
-                qualification: Weed.qualification,
-                substance: Weed.substance,
-                topEffect: Weed.topEffect,
-                aroma: Weed.aroma,
+                name: _Weedz[x].name,
+                type: _Weedz[x].type,
+                qualification: _Weedz[x].qualification,
+                substance: _Weedz[x].substance,
+                topEffect: _Weedz[x].topEffect,
+                aroma: _Weedz[x].aroma,
                 Effects: { _Feelings, _Negatives },
                 _Flavors,
                 _cannabinoides
             });
-
-            if(i == _Weedz.length()){
-                return _collection;
-            }
-        });
+        }
 
         //
-        return _WeedsCollection;
+        return _collection;
     } 
     catch(e){
         throw new Error(e);
