@@ -1,4 +1,4 @@
-const DAOCannabinoide = require('../DAO/cannabinoide.dao');
+const DAOCannabinoide = require('../dao/cannabinoide.dao');
 
 const guardar = async(data) => {
     try{

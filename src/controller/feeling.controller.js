@@ -1,4 +1,4 @@
-const DAOFeeling = require('../DAO/feeling.dao');
+const DAOFeeling = require('../dao/feeling.dao');
 
 const guardar = async(data) => {
     try{

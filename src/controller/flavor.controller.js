@@ -1,4 +1,4 @@
-const DAOFlavor = require('../DAO/flavor.dao');
+const DAOFlavor = require('../dao/flavor.dao');
 
 const guardar = async(data) => {
     try{

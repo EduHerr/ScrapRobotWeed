@@ -1,4 +1,4 @@
-const DAONegative = require('../DAO/negative.dao');
+const DAONegative = require('../dao/negative.dao');
 
 const guardar = async(data) => {
     try{
