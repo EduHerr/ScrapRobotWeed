@@ -23,9 +23,6 @@ const writeError = (error) => {
         message: error.message, 
         timestamp: new Date().toLocaleString('es-MX') 
     });
-
-    //
-    console.log('Error escrito con exitos');
 }
 
 const writeEvent = (event) => {
