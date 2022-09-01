@@ -1,6 +1,8 @@
+const conn = require('../../configuration/database');
+const ExternalError = require('../../utils/errors/external.error');
 const { getContenidoPaginaWeb } = require('../datasource/scrappinData');
 const fs = require('fs');
-const conn = require('../../configuration/database');
+
 
 //@exports
 /* Scrapper */
@@ -22,11 +24,11 @@ const descargarInformacion = async() => { /* Obtener el numero del paginado */
             }
         }
         else{
-            throw new Error('Ya se genero el historico del dia de hoy');
+            throw new ExternalError('Ya se genero el historico del dia de hoy');
         }
     }
     catch(e){
-        console.log(e);
+        throw e;
     }
 };
 /* MySQL */
@@ -118,7 +120,7 @@ const validarExistenciaHist = async() => {// :void
 
 const getTodayFormat = () => {// :void
     let today = new Date();
-    return today.getDate() + '-' + today.getMonth() + 1 + '-' + today.getFullYear();
+    return today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
 };
 
 module.exports = { descargarInformacion, save, read };

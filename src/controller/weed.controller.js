@@ -1,4 +1,5 @@
 const DAOWeed = require('../dao/weed.dao');
+const ErrorManage = require('../../utils/handle/errorManager.handle');
 const CannabinoideController = require('../controller/cannabinoide.controller');
 const FlavorController = require('../controller/flavor.controller');
 const FeelingController = require('../controller/feeling.controller');
@@ -54,7 +55,7 @@ const descargarInfo = async() => {
         return 'Info descargada y guardada en la base de datos!!';
     }
     catch(e){
-        throw new Error(e);
+        ErrorManage.manage(e);
     }
 }
 
@@ -91,7 +92,7 @@ const leerColeccion = async () => {
         return _collection;
     } 
     catch(e){
-        throw new Error(e);
+        ErrorManage(e);
     }
 }
 

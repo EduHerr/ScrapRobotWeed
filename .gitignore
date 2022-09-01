@@ -2,3 +2,4 @@ node_modules/
 src/backsource
 .env
 /documentacion
+/src/utils/loggs/*
