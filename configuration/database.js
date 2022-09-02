@@ -1,6 +1,5 @@
 require('dotenv').config();
 const mysql = require ('mysql');
-const ErrorManage = require('../utils/handle/errorManager.handle');
 
 const conn = mysql.createConnection({
 	host: process.env.DB_HOST,
@@ -11,9 +10,8 @@ const conn = mysql.createConnection({
 
 conn.connect(function (err){
 	if(err){
-		ErrorManage.manage(new Error('Error al intentar conectar base de datos'));
 		console.log('Se produjo un error al intentar conectar con la base de datos: ' + err);
-		return;
+		throw new Error('Error al intentar conectar base de datos');
 	}
 	else{
 		console.log('BD Connected!!')

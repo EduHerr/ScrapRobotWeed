@@ -29,9 +29,11 @@ const writeEvent = (event) => {
     /* [Configuration Logger] */
     const Logger = winston.createLogger({
         level: 'info',
-        format: format.combine(format.simple()),
+        format: winston.format.combine(
+            winston.format.prettyPrint()
+        ),
         transports: [
-            new transports.File({
+            new winston.transports.File({
                 maxSize: 5120000, /* 5 MB */
                 maxFiles: 5,
                 filename: `${__dirname}/../loggs/event/events-log.log`
@@ -40,7 +42,10 @@ const writeEvent = (event) => {
     });
 
     //Escribir evento
-    Logger.info(error);
+    Logger.info(event, {
+        message: event,
+        timestamp: new Date().toLocaleString('es-MX')
+    });
 }
 
-module.exports = { writeError };
+module.exports = { writeError, writeEvent };

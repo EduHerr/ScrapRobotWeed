@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer')
 const { getRandom } = require('random-useragent');
+const { writeEvent } = require('../../utils/handle/logger.handle');
 
 //@exports
 module.exports.getContenidoPaginaWeb = async(Uri) => {
@@ -47,11 +48,15 @@ const getWeedCollection = async(page) => {
     const _Weeds = [];
     let Details = {};
 
+    let x = 0;
+
     try{
         //
         const obtenerWeedz = async(page) =>{
             let actualUri = await page.evaluate(() => { return window.location.href });
             
+            writeEvent('URI visited: '+actualUri);
+
             //
             await page.waitForSelector('#strain-list');
 
@@ -185,17 +190,24 @@ const getWeedCollection = async(page) => {
                 }
             });
 
-            //Validamos existencia del boton para redireccionarnos a la siguiente pagina
-            if(NextButtonPaginator != false){
-                //Navegar a la siguiente pagina [Recorre paginador]
-                await page.goto(NextButtonPaginator, [2000, { waitUntil: "domcontentloaded" }]);
+            //Testing
+            if(x < 5){ 
+                x++;
+                //Validamos existencia del boton para redireccionarnos a la siguiente pagina
+                if(NextButtonPaginator != false){
+                    //Navegar a la siguiente pagina [Recorre paginador]
+                    await page.goto(NextButtonPaginator, [2000, { waitUntil: "domcontentloaded" }]);
 
-                //recursividad
-                return await obtenerWeedz(page);
+                    //recursividad
+                    return await obtenerWeedz(page);
+                }
             }
         };
 
         await obtenerWeedz(page); 
+
+        //
+        writeEvent('Scrapping end');
 
         return _Weeds;
     }

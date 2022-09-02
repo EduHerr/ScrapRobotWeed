@@ -1,9 +1,9 @@
 const DAOWeed = require('../dao/weed.dao');
-const ErrorManage = require('../../utils/handle/errorManager.handle');
 const CannabinoideController = require('../controller/cannabinoide.controller');
 const FlavorController = require('../controller/flavor.controller');
 const FeelingController = require('../controller/feeling.controller');
 const NegativeController = require('../controller/negative.controller');
+const { writeEvent } = require('../../utils/handle/logger.handle');
 
 const descargarInfo = async() => {
     try{
@@ -52,10 +52,13 @@ const descargarInfo = async() => {
         }
 
         //
+        writeEvent('Info descargada y guardada en la base de datos!!');
+
+        //
         return 'Info descargada y guardada en la base de datos!!';
     }
     catch(e){
-        ErrorManage.manage(e);
+        throw e;
     }
 }
 
@@ -92,7 +95,7 @@ const leerColeccion = async () => {
         return _collection;
     } 
     catch(e){
-        ErrorManage(e);
+        throw e;
     }
 }
 
