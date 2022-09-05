@@ -48,8 +48,6 @@ const getWeedCollection = async(page) => {
     const _Weeds = [];
     let Details = {};
 
-    let x = 0;
-
     try{
         //
         const obtenerWeedz = async(page) =>{
@@ -190,17 +188,13 @@ const getWeedCollection = async(page) => {
                 }
             });
 
-            //Testing
-            if(x < 5){ 
-                x++;
-                //Validamos existencia del boton para redireccionarnos a la siguiente pagina
-                if(NextButtonPaginator != false){
-                    //Navegar a la siguiente pagina [Recorre paginador]
-                    await page.goto(NextButtonPaginator, [2000, { waitUntil: "domcontentloaded" }]);
+            //Validamos existencia del boton para redireccionarnos a la siguiente pagina
+            if(NextButtonPaginator != false){
+                //Navegar a la siguiente pagina [Recorre paginador]
+                await page.goto(NextButtonPaginator, [2000, { waitUntil: "domcontentloaded" }]);
 
-                    //recursividad
-                    return await obtenerWeedz(page);
-                }
+                //recursividad
+                return await obtenerWeedz(page);
             }
         };
 
@@ -219,7 +213,7 @@ const getWeedCollection = async(page) => {
 const iniciarUsuario = () => {
     try{
         return getRandom((ub) => { // ub => user-browser
-            return ub.browserName === 'Chrome';
+            return ub.browserName === 'Firefox';
         });
     }
     catch(e){
