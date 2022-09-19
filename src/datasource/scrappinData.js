@@ -3,7 +3,8 @@ const { getRandom } = require('random-useragent');
 const { writeEvent } = require('../../utils/handle/logger.handle');
 
 //@exports
-module.exports.getContenidoPaginaWeb = async(Uri) => {
+module.exports.getContenidoPaginaWeb = async() => {
+    const Uri = 'https://www.leafly.com/';
     let _WeedzCollect = [];
 
     try{

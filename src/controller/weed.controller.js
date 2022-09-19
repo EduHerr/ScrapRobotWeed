@@ -1,10 +1,6 @@
 const DAOWeed = require('../dao/weed.dao');
-const CannabinoideController = require('../controller/cannabinoide.controller');
-const FlavorController = require('../controller/flavor.controller');
-const FeelingController = require('../controller/feeling.controller');
-const NegativeController = require('../controller/negative.controller');
 const { writeEvent } = require('../../utils/handle/logger.handle');
-
+const { Parser } = require('json2csv');
 const descargarInfo = async() => {
     try{
         //Obtener coleccion de _Weedz
@@ -62,7 +58,7 @@ const descargarInfo = async() => {
     }
 }
 
-const leerColeccion = async () => {
+const leer = async () => {
     const _collection = [];
 
     try{
@@ -99,4 +95,46 @@ const leerColeccion = async () => {
     }
 }
 
-module.exports = { descargarInfo, leerColeccion };
+const exportar = () => {
+    try{
+        return new Promise(async(resolve, reject) => {
+            const _Weedz = await leer();
+    
+            //Validar que hay registros
+            if(_Weedz.length > 0){
+                //Fields to Parser-csv
+                const fields = ['nombre', 'seccion', 'precio', 'descripcion', 'Source'];
+    
+                //Parser-CSV
+                const parser = new Parser({ fields });
+                const csv = parser.parse(_Dishes);
+                
+                //CSV-File
+                //Conseguir la fecha de hoy para poderla ocupar en el nombre del archivo
+                let name = new Date();
+                name = name.getDate() + '-' + (name.getMonth() + 1) + '-' + name.getFullYear();
+                name = (Math.random() * (100000000 - 1) + 1) + name;
+                name = './src/backsource/csv/' + name + '.csv';
+                
+                //Escribir el archivo
+                writeFile(name, csv, (err) => {
+                    if(!err){
+                        writeEvent('Backsource CSV, generated successfully');
+                        resolve({ route: name, csv });
+                    }
+                    else{
+                        reject(err);
+                    }
+                });
+            }
+            else{
+                reject('No se cuenta con registros para exportar');
+            }
+        });
+    }
+    catch(e){
+        throw e;
+    }
+}
+
+module.exports = { descargarInfo, leer };

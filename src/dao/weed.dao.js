@@ -1,126 +1,28 @@
-const conn = require('../../configuration/database');
-const ExternalError = require('../../utils/errors/external.error');
-const { getContenidoPaginaWeb } = require('../datasource/scrappinData');
-const fs = require('fs');
-
+require('../../config/database');
+const Weed = require('../model/Weed');
 
 //@exports
-/* Scrapper */
-const descargarInformacion = async() => { /* Obtener el numero del paginado */
+/* MongoDB */
+const save = async (data) => {
     try{
-        //Validar si ya existe el respaldo de hoy
-        const validResult = await validarExistenciaHist();
+        const weed = new Weed(data);
 
-        if(!validResult){
-            //Obtener el contenido de toda la pagina con -Scrapping-
-            const __WeedzCollection = await getContenidoPaginaWeb('https://www.leafly.com/');
-
-            //Generar un historico/respaldo del -Scrapping- que se realizo
-            const resultHistorico = await generarHistorico(__WeedzCollection);
-
-            //
-            if(resultHistorico){
-                return __WeedzCollection; 
-            }
-        }
-        else{
-            throw new ExternalError('Ya se genero el historico del dia de hoy');
-        }
-    }
-    catch(e){
-        throw e;
-    }
-};
-/* MySQL */
-const save = (data) => {
-    const { name, qualification, type, topEffect, aroma, substance } = data;
-
-    try{
-        return new Promise((resolve, reject) => {
-            conn.query("CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)", [1, name, qualification, type, topEffect, aroma, substance], (err, rows) => {
-                if(!err){
-                    resolve(rows[0][0]);
-                }
-                else{
-                    reject('Error al intentar insertar *Feeling: ' + err.message);
-                }
-            });
-        });
+        await weed.save();
+        return true;
     }
     catch(error){
-        throw 'Error in MySql:' +error.message;
+        throw 'Error al intentar insertar:' +error.message;
     }
 };
 
-const read = () => {
+const read = async () => {
     try{
-        return new Promise((resolve, reject) => {
-            conn.query("CALL SP_WEED(?, ?, ?, ?, ?, ?, ?)", [0, null, null, null, null, null, null], (err, rows) => {
-                if(!err){
-                    if(rows[0].length > 0){
-                        resolve(rows[0]);
-                    }
-                    else{
-                        reject('No hay -Weedz- registradas');
-                    }
-                }
-                else{
-                    reject('Error al leer *WeedDao: ' + err.message);
-                }
-            });
-        });
+        const _Weedz = await Weed.find().exec();
+        return _Weedz;
     }
     catch(error){
-        throw 'Error in MySql:' +error;
+        throw 'Error al intentar leer:' +error;
     }
 };
 
-//@static
-/* Scrapper */
-const generarHistorico = async(_Collection) => { /* Genera un historico en JSON, en un archivo... De lo -Scrappeado- */
-    //Escribir documento JSON
-    return new Promise((resolve, reject) => {
-        //Convertir mi -_Collection- en un String
-        _Collection = JSON.stringify(_Collection, null, 2);
-
-        //Conseguir la fecha de hoy para poderla ocupar en el nombre del archivo
-        let name = getTodayFormat();
-        name = name + '.json';
-        
-        //Escribir el archivo
-        fs.writeFile('./src/backsource/' + name, _Collection, { encoding: 'utf8' }, (err) => {
-            if(!err){
-                resolve(true);
-            }
-
-            reject(err);
-        });
-    });
-};
-
-const validarExistenciaHist = async() => {// :void
-    return new Promise((resolve, reject) => {
-        let name = getTodayFormat();
-        name = name + '.json';
-
-        fs.open('./src/backsource/' + name, (err) => {
-            if(err){//NO EXISTE
-                if(err.code === 'ENOENT'){
-                    resolve(false);
-                }
-
-                reject(err);
-            }
-
-            //EXISTE
-            resolve(true);
-        });
-    });
-};
-
-const getTodayFormat = () => {// :void
-    let today = new Date();
-    return today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
-};
-
-module.exports = { descargarInformacion, save, read };
+module.exports = { save, read };

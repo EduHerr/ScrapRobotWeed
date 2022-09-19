@@ -20,9 +20,24 @@ router.get('/downloadInfo', (req, res) => {
     })
 });
 
-router.get('/leer-strains', (req, res) => {
-    weedController.leerColeccion()
+router.get('/leer', (req, res) => {
+    weedController.leer()
     .then(result => res.json({ status: 200, message: result }))
+    .catch(error => {
+        //
+        writeError(error);
+        
+        //
+        res.json({ status: 500, message: error.message })
+    })
+});
+
+router.get('/exportar', (req, res) => {
+    weedController.exportar()
+    .then(file => {
+        res.attachment(file.route);
+        res.status(200).send(file.csv);
+    })
     .catch(error => {
         //
         writeError(error);
