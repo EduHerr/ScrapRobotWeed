@@ -1,57 +1,16 @@
 const DAOWeed = require('../dao/weed.dao');
 const { writeEvent } = require('../../utils/handle/logger.handle');
 const { Parser } = require('json2csv');
-const descargarInfo = async() => {
+
+const guardar = async(data) => {
     try{
-        //Obtener coleccion de _Weedz
-        const _WeedzCollection = await DAOWeed.descargarInformacion();
+        //
+        const result = await DAOWeed.save(data);
 
-        //Iterar la coleccion para extraer los fragmentos de data e insertarlos en sus respectivas tablas
-        for(let i = 0; i < _WeedzCollection.length; i++)
-        {
-            let { name, type, qualification, substance, topEffect, aroma, _cannabinoides, _Flavors, Effects: { _Feelings, _Negatives } } = _WeedzCollection[i];
-
-            let _idWeed = await DAOWeed.save({ name, type, qualification, substance, topEffect, aroma });
-            _idWeed = _idWeed._id;
-
-            //Validar que traiga _cannabinoides
-            if(_cannabinoides != null || _cannabinoides != []){
-                for(const cannabinoide of _cannabinoides)
-                {
-                    await CannabinoideController.guardar({ _idWeed, cannabinoide });
-                }
-            }
-
-            //Validar que traiga _flavors
-            if(_Flavors != null || _Flavors != []){
-                for(const flavor of _Flavors)
-                {
-                    await FlavorController.guardar({ _idWeed, flavor });
-                }
-            }
-
-            //Validar _Feelings
-            if(_Feelings != null || _Feelings != []){
-                for(const feeling of _Feelings)
-                {
-                    await FeelingController.guardar({ _idWeed, feeling });
-                }
-            }
-
-            //Validar _Negatives
-            if(_Negatives != null || _Negatives != []){
-                for(const negative of _Negatives)
-                {
-                    await NegativeController.guardar({ _idWeed, negative });
-                }
-            }
+        //
+        if(result){
+            writeEvent('Data guardada en la bd!!');
         }
-
-        //
-        writeEvent('Info descargada y guardada en la base de datos!!');
-
-        //
-        return 'Info descargada y guardada en la base de datos!!';
     }
     catch(e){
         throw e;
@@ -137,4 +96,4 @@ const exportar = () => {
     }
 }
 
-module.exports = { descargarInfo, leer };
+module.exports = { guardar, leer, exportar };

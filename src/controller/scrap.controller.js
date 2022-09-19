@@ -1,17 +1,50 @@
 const { getContenidoPaginaWeb } = require('../datasource/scrappinData');
+const { guardar } = require('./weed.controller');
 const { writeEvent } = require('../../utils/handle/logger.handle');
-const { writeFile } = require('fs');
+const { writeFile, open } = require('fs');
 
 //@export
 const downloadInfo = async () => {
     try{
-        //Descargar info. -Scrapper-
-        const _dataScrap = await getContenidoPaginaWeb();
+        //Conseguir la fecha de hoy para poderla ocupar en el nombre del archivo
+        let name = new Date();
+        name = name.getDate() + '-' + (name.getMonth() + 1) + '-' + name.getFullYear();
+        name = name + '.json';
 
-        //Generar respaldo
-        await createBackSource(_dataScrap);
+        //Validar existencia
+        const validateResult = await validarExistenciaHist(name);
+    
+        if(!validateResult){
+            //Descargar info. -Scrapper-
+            const _dataScrap = await getContenidoPaginaWeb();
 
+            //Generar respaldo
+            const result = await createBackSource({ _dataScrap, name });
+            
+            //Guardar en la bd
+            if(result){
+                //Iterar coleccion
+                for(const Weed of _dataScrap){
+                    await guardar({
+                        nombre: Weed.name,
+                        calificacion: Weed.qualification,
+                        tipo: Weed.type,
+                        efecto: Weed.topEffect,
+                        aroma: Weed.aroma,
+                        sustancia: Weed.substance,
+                        _Sabor: Weed._Flavors,
+                        _Sensacion: Weed.Effects._Feelings,
+                        _SensacionNegativa: Weed.Effects._Negatives,
+                        _Cannabinoide: Weed._cannabinoides
+                    });
+                }
+            }
+        }
+        else{
+            throw 'Por cuestiones tecnicas, el scrapper solo se puede ejecutar una vez por dia';
+        }
 
+        return true;
     }
     catch(e){
         throw e;
@@ -20,43 +53,28 @@ const downloadInfo = async () => {
 
 //@static
 const createBackSource = (data) => {
+    let { _dataScrap, name } = data;
+
     //Escribir documento JSON
     return new Promise((resolve, reject) => {
-        //
-        const validateResult = validarExistenciaHist.then(res => { return res; }).catch(e => { throw e; })
+        //Convertir mi -_Collection- en un String
+        _dataScrap = JSON.stringify(_dataScrap, null, 2);
 
-        //
-        if(!validateResult){
-            //Convertir mi -_Collection- en un String
-            const _Collection = JSON.stringify(data, null, 2);
+        //Escribir el archivo
+        writeFile('./src/backsource/' + name, _dataScrap, { encoding: 'utf8' }, (err) => {
+            if(!err){
+                writeEvent('Backsource from dataScrapped, generated successfully');
+                resolve(true);
+            }
 
-            //Conseguir la fecha de hoy para poderla ocupar en el nombre del archivo
-            let name = new Date();
-            name = name.getDate() + '-' + (name.getMonth() + 1) + '-' + name.getFullYear();
-            name = name + '.json';
-
-            //Escribir el archivo
-            writeFile('./src/backsource/' + name, _Collection, { encoding: 'utf8' }, (err) => {
-                if(!err){
-                    writeEvent('Backsource from dataScrapped, generated successfully');
-                    resolve(true);
-                }
-
-                reject(err);
-            });
-        }
-        else{
-            throw 'Por condiciones tecnicas, no se puede ejecutar el scrap mas de una vez por dia';
-        }
+            reject(err);
+        });
     });
-}
+}   
 
-const validarExistenciaHist = async() => {// :void
+const validarExistenciaHist = async(name) => {// :void
     return new Promise((resolve, reject) => {
-        let name = new Date();
-        name = name.getDate() + '-' + (name.getMonth() + 1) + '-' + name.getFullYear();
-
-        fs.open('./src/backsource/' + name, (err) => {
+        open('./src/backsource/' + name, (err) => {
             if(err){//NO EXISTE
                 if(err.code === 'ENOENT'){
                     resolve(false);

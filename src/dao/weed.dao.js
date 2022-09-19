@@ -1,4 +1,4 @@
-require('../../config/database');
+require('../../configuration/database');
 const Weed = require('../model/Weed');
 
 //@exports

@@ -37,6 +37,9 @@ module.exports.getContenidoPaginaWeb = async() => {
         await browser.close();
 
         //
+        writeEvent('ScrapperData gets to the end');
+
+        //
         return _WeedzCollect;
     } 
     catch(e){
@@ -48,6 +51,8 @@ module.exports.getContenidoPaginaWeb = async() => {
 const getWeedCollection = async(page) => {
     const _Weeds = [];
     let Details = {};
+
+    let x = 0;
 
     try{
         //
@@ -168,6 +173,9 @@ const getWeedCollection = async(page) => {
                 _Weeds.push(Details);
             }
 
+            //
+            x++;
+
             //Redirigir a la pagina principal-anterior para poder dar siguiente al paginador
             await page.goto(actualUri, [1000, { waitUntil: "domcontentloaded" }]);
 
@@ -189,13 +197,15 @@ const getWeedCollection = async(page) => {
                 }
             });
 
-            //Validamos existencia del boton para redireccionarnos a la siguiente pagina
-            if(NextButtonPaginator != false){
-                //Navegar a la siguiente pagina [Recorre paginador]
-                await page.goto(NextButtonPaginator, [2000, { waitUntil: "domcontentloaded" }]);
+            if(x < 6){
+                //Validamos existencia del boton para redireccionarnos a la siguiente pagina
+                if(NextButtonPaginator != false){
+                    //Navegar a la siguiente pagina [Recorre paginador]
+                    await page.goto(NextButtonPaginator, [2000, { waitUntil: "domcontentloaded" }]);
 
-                //recursividad
-                return await obtenerWeedz(page);
+                    //recursividad
+                    return await obtenerWeedz(page);
+                }
             }
         };
 

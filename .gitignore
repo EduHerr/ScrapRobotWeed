@@ -1,5 +1,6 @@
 node_modules/
-src/backsource
+src/backsource/*.json
+src/backsource/*.csv
 .env
 /documentacion
 /src/utils/loggs/*

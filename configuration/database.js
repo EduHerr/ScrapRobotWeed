@@ -1,21 +1,19 @@
 require('dotenv').config();
-const mysql = require ('mysql');
+const mongoose = require('mongoose');
+const db = mongoose.connection;
 
-const conn = mysql.createConnection({
-	host: process.env.DB_HOST,
-	user: process.env.DB_USER,
-	password: process.env.DB_PASSWORD,
-	database: process.env.DB_NAME
+/* Connect configuration */
+mongoose.connect(process.env.DB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
-conn.connect(function (err){
-	if(err){
-		console.log('Se produjo un error al intentar conectar con la base de datos: ' + err);
-		throw new Error('Error al intentar conectar base de datos');
-	}
-	else{
-		console.log('BD Connected!!')
-	}
+//Connection open
+db.once('open', _ => {
+    console.log('Base de datos conectada en:'+process.env.DB_URI);
 });
 
-module.exports = conn;
+//Connection close
+db.on('error', (error) => {
+    console.log(error);
+});

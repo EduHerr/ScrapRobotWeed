@@ -1,8 +1,4 @@
 const { Schema, model } = require('mongoose');
-const Flavor = require('./Flavor');
-const Feeling = require('./Feeling');
-const Negative = require('./Negative');
-const Cannabinoide = require('./Cannabinoide');
 
 const weedSchema = new Schema({
     nombre: { type: String, default: null }, 
@@ -11,11 +7,11 @@ const weedSchema = new Schema({
     efecto: { type: String, default: null }, 
     aroma: { type: String, default: null }, 
     sustancia: { type: String, default: null },
-    _Sabor: { type: [ Flavor ], default: null },
-    _Sensacion: { type: [ Feeling ], default: null },
-    _SensacionNegativa: { type: [ Negative ], default: null },
-    _Cannabinoide: { type: [ Cannabinoide ], default: null },
-    createdAt: { type: Date, default: new Date.now() }
+    _Sabor: [{ type: Schema.Types.ObjectId, ref: 'Flavor' }],
+    _Sensacion: [{ type: Schema.Types.ObjectId, ref: 'Feeling' }],
+    _SensacionNegativa: [{ type: Schema.Types.ObjectId, ref: 'Negative' }],
+    _Cannabinoide: [{ type: Schema.Types.ObjectId, ref: 'Cannabinoide' }],
+    createdAt: { type: Date, default: new Date() }
 });
 
 module.exports = model('Weed', weedSchema);
