@@ -1,6 +1,7 @@
 const DAOWeed = require('../dao/weed.dao');
 const { writeEvent } = require('../../utils/handle/logger.handle');
 const { Parser } = require('json2csv');
+const { writeFile } = require('fs');
 
 const guardar = async(data) => {
     try{
@@ -18,36 +19,9 @@ const guardar = async(data) => {
 }
 
 const leer = async () => {
-    const _collection = [];
-
     try{
         const _Weedz = await DAOWeed.read();
-
-        //Iterar
-        for(let x=0; x<_Weedz.length; x++)
-        {
-            
-
-            const _cannabinoides = await CannabinoideController.leer(_Weedz[x]._id);
-            const _Flavors = await FlavorController.leer(_Weedz[x]._id);
-            const _Feelings = await FeelingController.leer(_Weedz[x]._id);
-            const _Negatives = await NegativeController.leer(_Weedz[x]._id);
-
-            _collection.push({
-                name: _Weedz[x].name,
-                type: _Weedz[x].type,
-                qualification: _Weedz[x].qualification,
-                substance: _Weedz[x].substance,
-                topEffect: _Weedz[x].topEffect,
-                aroma: _Weedz[x].aroma,
-                Effects: { _Feelings, _Negatives },
-                _Flavors,
-                _cannabinoides
-            });
-        }
-
-        //
-        return _collection;
+        return _Weedz;
     } 
     catch(e){
         throw e;
@@ -62,11 +36,11 @@ const exportar = () => {
             //Validar que hay registros
             if(_Weedz.length > 0){
                 //Fields to Parser-csv
-                const fields = ['nombre', 'seccion', 'precio', 'descripcion', 'Source'];
+                const fields = ['nombre', 'calificacion', 'tipo', 'efecto', 'aroma', 'sustancia', '_Flavor', '_Feeling', '_Negative', '_Cannabinoide'];
     
                 //Parser-CSV
                 const parser = new Parser({ fields });
-                const csv = parser.parse(_Dishes);
+                const csv = parser.parse(_Weedz);
                 
                 //CSV-File
                 //Conseguir la fecha de hoy para poderla ocupar en el nombre del archivo

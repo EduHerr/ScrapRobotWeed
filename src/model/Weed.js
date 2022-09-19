@@ -7,10 +7,10 @@ const weedSchema = new Schema({
     efecto: { type: String, default: null }, 
     aroma: { type: String, default: null }, 
     sustancia: { type: String, default: null },
-    _Sabor: [{ type: Schema.Types.ObjectId, ref: 'Flavor' }],
-    _Sensacion: [{ type: Schema.Types.ObjectId, ref: 'Feeling' }],
-    _SensacionNegativa: [{ type: Schema.Types.ObjectId, ref: 'Negative' }],
-    _Cannabinoide: [{ type: Schema.Types.ObjectId, ref: 'Cannabinoide' }],
+    _Flavor: [{ type: String, default: null }],
+    _Feeling: [{ type: String, default: null }],
+    _Negative: [{ type: String, default: null }],
+    _Cannabinoide: [{ type: String, default: null }],
     createdAt: { type: Date, default: new Date() }
 });
 

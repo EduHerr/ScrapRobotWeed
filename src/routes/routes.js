@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { writeError } = require('../../utils/handle/logger.handle');
 const { downloadInfo } = require('../controller/scrap.controller');
+const { leer, exportar } = require('../controller/weed.controller');
 
 //
 router.use(express.json());
@@ -21,7 +22,7 @@ router.get('/downloadInfo', (req, res) => {
 });
 
 router.get('/leer', (req, res) => {
-    weedController.leer()
+    leer()
     .then(result => res.json({ status: 200, message: result }))
     .catch(error => {
         //
@@ -33,7 +34,7 @@ router.get('/leer', (req, res) => {
 });
 
 router.get('/exportar', (req, res) => {
-    weedController.exportar()
+    exportar()
     .then(file => {
         res.attachment(file.route);
         res.status(200).send(file.csv);

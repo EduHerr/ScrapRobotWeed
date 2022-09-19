@@ -32,9 +32,9 @@ const downloadInfo = async () => {
                         efecto: Weed.topEffect,
                         aroma: Weed.aroma,
                         sustancia: Weed.substance,
-                        _Sabor: Weed._Flavors,
-                        _Sensacion: Weed.Effects._Feelings,
-                        _SensacionNegativa: Weed.Effects._Negatives,
+                        _Flavor: Weed._Flavors,
+                        _Feeling: Weed.Effects._Feelings,
+                        _Negative: Weed.Effects._Negatives,
                         _Cannabinoide: Weed._cannabinoides
                     });
                 }
