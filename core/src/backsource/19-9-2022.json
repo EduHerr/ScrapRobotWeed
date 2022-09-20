@@ -1,0 +1,3128 @@
+[
+  {
+    "name": "Wedding Cake",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "vanilla",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 24%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "pepper",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "hungry",
+        "aroused"
+      ],
+      "_Negatives": [
+        "dizzy",
+        "anxious",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "GG4",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "pungent",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "pungent",
+      "pine",
+      "earthy"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "sleepy",
+        "hungry"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "paranoid",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Runtz",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "sweet",
+    "aroma": "talkative",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "sweet",
+      "tree fruit",
+      "berry"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "talkative",
+        "happy",
+        "giggly"
+      ],
+      "_Negatives": [
+        "headache",
+        "anxious",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Ice Cream Cake",
+    "type": "Indica",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "vanilla",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 23%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "butter",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "hungry"
+      ],
+      "_Negatives": [
+        "headache",
+        "dizzy",
+        "anxious"
+      ]
+    }
+  },
+  {
+    "name": "Gelato",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "sweet",
+    "aroma": "euphoric",
+    "_cannabinoides": [
+      "THC 16%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "sweet",
+      "vanilla",
+      "mint"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "euphoric",
+        "aroused",
+        "happy"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "paranoid",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Blue Dream",
+    "type": "Hybrid",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "blueberry",
+    "aroma": "creative",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "blueberry",
+      "berry",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "creative",
+        "uplifted",
+        "energetic"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "paranoid",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Sour Diesel",
+    "type": "Sativa",
+    "qualification": "4.3",
+    "substance": "Caryophyllene",
+    "topEffect": "diesel",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "diesel",
+      "pungent",
+      "skunk"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "talkative",
+        "creative"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry mouth",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Dosidos",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "flowery",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "flowery",
+      "pepper",
+      "pungent"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "hungry"
+      ],
+      "_Negatives": [
+        "dizzy",
+        "dry eyes",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Apple Fritter",
+    "type": "Hybrid",
+    "qualification": "4.5",
+    "substance": "Caryophyllene",
+    "topEffect": "apple",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 25%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "apple",
+      "cheese",
+      "butter"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "tingly",
+        "giggly"
+      ],
+      "_Negatives": [
+        "dizzy",
+        "anxious",
+        "headache"
+      ]
+    }
+  },
+  {
+    "name": "GSC",
+    "type": "Hybrid",
+    "qualification": "4.4",
+    "substance": "Caryophyllene",
+    "topEffect": "mint",
+    "aroma": "hungry",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "mint",
+      "sweet",
+      "vanilla"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "hungry",
+        "giggly",
+        "happy"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Zkittlez",
+    "type": "Indica",
+    "qualification": "4.5",
+    "substance": "Caryophyllene",
+    "topEffect": "grape",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "grape",
+      "grapefruit",
+      "berry"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "sleepy",
+        "hungry"
+      ],
+      "_Negatives": [
+        "headache",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "OG Kush",
+    "type": "Hybrid",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "pine",
+    "aroma": "hungry",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "pine",
+      "woody",
+      "earthy"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "hungry",
+        "sleepy",
+        "euphoric"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Mac 1",
+    "type": "Hybrid",
+    "qualification": "4.7",
+    "substance": "Limonene",
+    "topEffect": "butter",
+    "aroma": "uplifted",
+    "_cannabinoides": [
+      "THC 22%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "butter",
+      "citrus",
+      "vanilla"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "uplifted",
+        "euphoric",
+        "energetic"
+      ],
+      "_Negatives": [
+        "dizzy",
+        "anxious",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Biscotti",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "vanilla",
+    "aroma": "tingly",
+    "_cannabinoides": [
+      "THC 22%",
+      "CBG 2%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "diesel",
+      "honey"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "tingly",
+        "relaxed",
+        "happy"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "anxious",
+        "headache"
+      ]
+    }
+  },
+  {
+    "name": "Purple Punch",
+    "type": "Indica",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "grape",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "grape",
+      "berry",
+      "blueberry"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "hungry"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dizzy",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "White Widow",
+    "type": "Hybrid",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "woody",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 15%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "woody",
+      "spicy/herbal",
+      "earthy"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "talkative",
+        "creative"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "paranoid",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Jack Herer",
+    "type": "Sativa",
+    "qualification": "4.4",
+    "substance": "Terpinolene",
+    "topEffect": "pine",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "pine",
+      "spicy/herbal",
+      "woody"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "creative",
+        "uplifted"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry eyes",
+        "dry mouth"
+      ]
+    }
+  },
+  {
+    "name": "Mimosa",
+    "type": "Hybrid",
+    "qualification": "4.5",
+    "substance": "Myrcene",
+    "topEffect": "orange",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "orange",
+      "citrus",
+      "grapefruit"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "focused",
+        "uplifted"
+      ],
+      "_Negatives": [
+        "anxious",
+        "paranoid",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Granddaddy Purple",
+    "type": "Indica",
+    "qualification": "4.4",
+    "substance": "Myrcene",
+    "topEffect": "grape",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "grape",
+      "berry",
+      "violet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "hungry",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Gary Payton",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "apricot",
+    "aroma": "giggly",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "apricot",
+      "pepper",
+      "lavender"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "giggly",
+        "relaxed",
+        "talkative"
+      ],
+      "_Negatives": [
+        "anxious",
+        "paranoid",
+        "dry mouth"
+      ]
+    }
+  },
+  {
+    "name": "Oreoz",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "tobacco",
+    "aroma": "hungry",
+    "_cannabinoides": [
+      "THC 22%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "tobacco",
+      "vanilla",
+      "coffee"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "hungry",
+        "happy",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "anxious",
+        "dizzy",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Sherbert",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "sweet",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "sweet",
+      "tropical",
+      "citrus"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "happy",
+        "giggly"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "anxious",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Pineapple Express",
+    "type": "Hybrid",
+    "qualification": "4.4",
+    "substance": "Myrcene",
+    "topEffect": "pineapple",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "pineapple",
+      "tropical",
+      "mango"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "happy",
+        "talkative"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "paranoid",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Cereal Milk",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "vanilla",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 22%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "butter",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "giggly",
+        "aroused"
+      ],
+      "_Negatives": [
+        "headache",
+        "paranoid",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "GMO Cookies",
+    "type": "Hybrid",
+    "qualification": "4.7",
+    "substance": "Caryophyllene",
+    "topEffect": "pungent",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 28%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "pungent",
+      "chemical",
+      "pepper"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "sleepy",
+        "euphoric"
+      ],
+      "_Negatives": [
+        "dizzy",
+        "anxious",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Durban Poison",
+    "type": "Sativa",
+    "qualification": "4.4",
+    "substance": "Terpinolene",
+    "topEffect": "pine",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "pine",
+      "spicy/herbal",
+      "sage"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "focused",
+        "uplifted"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "anxious",
+        "dry mouth"
+      ]
+    }
+  },
+  {
+    "name": "White Runtz",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "peach",
+    "aroma": "tingly",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "peach",
+      "sweet",
+      "vanilla"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "tingly",
+        "relaxed",
+        "euphoric"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "dizzy",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Peanut Butter Breath",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "nutty",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "nutty",
+      "butter",
+      "chestnut"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "sleepy",
+        "hungry"
+      ],
+      "_Negatives": [
+        "anxious",
+        "headache",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Kush Mints",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "mint",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 27%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "mint",
+      "menthol",
+      "pine"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "hungry",
+        "happy"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "anxious",
+        "headache"
+      ]
+    }
+  },
+  {
+    "name": "Northern Lights",
+    "type": "Indica",
+    "qualification": "4.4",
+    "substance": "Myrcene",
+    "topEffect": "pine",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "pine",
+      "spicy/herbal",
+      "earthy"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "hungry",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Green Crack",
+    "type": "Sativa",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "mango",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "mango",
+      "citrus",
+      "tropical"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "focused",
+        "talkative"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "anxious",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Gushers",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "tropical",
+    "aroma": "tingly",
+    "_cannabinoides": [
+      "THC 24%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "tropical",
+      "sweet",
+      "berry"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "tingly",
+        "relaxed",
+        "euphoric"
+      ],
+      "_Negatives": [
+        "headache",
+        "dizzy",
+        "anxious"
+      ]
+    }
+  },
+  {
+    "name": "MAC",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "citrus",
+    "aroma": "happy",
+    "_cannabinoides": [
+      "THC 22%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "citrus",
+      "pepper",
+      "orange"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "happy",
+        "relaxed",
+        "uplifted"
+      ],
+      "_Negatives": [
+        "dizzy",
+        "anxious",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Slurricane",
+    "type": "Indica",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "berry",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "berry",
+      "grape",
+      "blueberry"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "hungry"
+      ],
+      "_Negatives": [
+        "headache",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Sundae Driver",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "grape",
+    "aroma": "giggly",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "grape",
+      "vanilla",
+      "berry"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "giggly",
+        "happy",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dizzy",
+        "anxious"
+      ]
+    }
+  },
+  {
+    "name": "Pink Runtz",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "strawberry",
+    "aroma": "giggly",
+    "_cannabinoides": [
+      "THC 24%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "strawberry",
+      "sweet",
+      "grapefruit"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "giggly",
+        "happy",
+        "talkative"
+      ],
+      "_Negatives": [
+        "headache",
+        "paranoid",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Cherry Pie",
+    "type": "Hybrid",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "berry",
+    "aroma": "giggly",
+    "_cannabinoides": [
+      "THC 16%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "berry",
+      "sweet",
+      "tree fruit"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "giggly",
+        "happy",
+        "euphoric"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "dry mouth",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Gelato #41",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "lavender",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 22%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "lavender",
+      "pepper",
+      "tropical"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "creative",
+        "happy"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "headache",
+        "dry mouth"
+      ]
+    }
+  },
+  {
+    "name": "Gelato #33",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "citrus",
+    "aroma": "uplifted",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "citrus",
+      "vanilla",
+      "pepper"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "uplifted",
+        "happy",
+        "euphoric"
+      ],
+      "_Negatives": [
+        "headache",
+        "dizzy",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Chemdawg",
+    "type": "Hybrid",
+    "qualification": "4.3",
+    "substance": "Caryophyllene",
+    "topEffect": "diesel",
+    "aroma": "euphoric",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "diesel",
+      "chemical",
+      "pungent"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "euphoric",
+        "uplifted",
+        "creative"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Strawberry Cough",
+    "type": "Sativa",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "strawberry",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "strawberry",
+      "berry",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "uplifted",
+        "talkative"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "paranoid",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "London Pound Cake",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "vanilla",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "butter",
+      "lemon"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "tingly"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry mouth",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Blue Cookies",
+    "type": "Hybrid",
+    "qualification": "4.7",
+    "substance": "Caryophyllene",
+    "topEffect": "blueberry",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "blueberry",
+      "berry",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "aroused",
+        "euphoric"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Lemon Cherry Gelato",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": null,
+    "topEffect": "lemon",
+    "aroma": "relaxed",
+    "_cannabinoides": [],
+    "_Flavors": [
+      "lemon",
+      "berry",
+      "lime"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "tingly",
+        "euphoric"
+      ],
+      "_Negatives": [
+        "dizzy",
+        "dry eyes",
+        "headache"
+      ]
+    }
+  },
+  {
+    "name": "Cheetah Piss",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "ammonia",
+    "aroma": "aroused",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "ammonia",
+      "menthol",
+      "pungent"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "aroused",
+        "uplifted",
+        "giggly"
+      ],
+      "_Negatives": [
+        "anxious",
+        "paranoid",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Super Lemon Haze",
+    "type": "Sativa",
+    "qualification": "4.4",
+    "substance": "Terpinolene",
+    "topEffect": "lemon",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "lemon",
+      "citrus",
+      "lime"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "uplifted",
+        "creative"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry eyes",
+        "dry mouth"
+      ]
+    }
+  },
+  {
+    "name": "Bubba Kush",
+    "type": "Indica",
+    "qualification": "4.3",
+    "substance": "Caryophyllene",
+    "topEffect": "coffee",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "coffee",
+      "pungent",
+      "earthy"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "hungry",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Wedding Crasher",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "vanilla",
+    "aroma": "focused",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "grape",
+      "berry"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "focused",
+        "uplifted",
+        "happy"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "headache",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Animal Mints",
+    "type": "Hybrid",
+    "qualification": "4.5",
+    "substance": "Caryophyllene",
+    "topEffect": "mint",
+    "aroma": "hungry",
+    "_cannabinoides": [
+      "THC 27%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "mint",
+      "menthol",
+      "apple"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "hungry",
+        "relaxed",
+        "sleepy"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "headache",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Lemon Haze",
+    "type": "Sativa",
+    "qualification": "4.2",
+    "substance": "Myrcene",
+    "topEffect": "lemon",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "lemon",
+      "citrus",
+      "lime"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "talkative",
+        "giggly"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry mouth",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Cookies and Cream",
+    "type": "Hybrid",
+    "qualification": "4.5",
+    "substance": "Caryophyllene",
+    "topEffect": "vanilla",
+    "aroma": "happy",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 2%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "sweet",
+      "nutty"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "happy",
+        "giggly",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "dry mouth",
+        "anxious"
+      ]
+    }
+  },
+  {
+    "name": "Forbidden Fruit",
+    "type": "Indica",
+    "qualification": "4.6",
+    "substance": "Myrcene",
+    "topEffect": "grapefruit",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 16%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "grapefruit",
+      "tropical",
+      "mango"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "hungry"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "paranoid",
+        "headache"
+      ]
+    }
+  },
+  {
+    "name": "Amnesia Haze",
+    "type": "Sativa",
+    "qualification": "4.2",
+    "substance": "Myrcene",
+    "topEffect": "lemon",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "lemon",
+      "citrus",
+      "lime"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "talkative",
+        "giggly"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry mouth",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "AK-47",
+    "type": "Hybrid",
+    "qualification": "4.1",
+    "substance": "Myrcene",
+    "topEffect": "skunk",
+    "aroma": "talkative",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "skunk",
+      "tobacco",
+      "spicy/herbal"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "talkative",
+        "hungry",
+        "energetic"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Bruce Banner",
+    "type": "Hybrid",
+    "qualification": "4.5",
+    "substance": "Myrcene",
+    "topEffect": "strawberry",
+    "aroma": "creative",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "strawberry",
+      "diesel",
+      "tea"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "creative",
+        "energetic",
+        "euphoric"
+      ],
+      "_Negatives": [
+        "dizzy",
+        "dry eyes",
+        "dry mouth"
+      ]
+    }
+  },
+  {
+    "name": "Blueberry",
+    "type": "Indica",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "blueberry",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "blueberry",
+      "berry",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "hungry",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "dry mouth",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Stardawg",
+    "type": "Hybrid",
+    "qualification": "4.4",
+    "substance": "Caryophyllene",
+    "topEffect": "diesel",
+    "aroma": "happy",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "diesel",
+      "chemical",
+      "pine"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "happy",
+        "talkative",
+        "energetic"
+      ],
+      "_Negatives": [
+        "dizzy",
+        "dry mouth",
+        "anxious"
+      ]
+    }
+  },
+  {
+    "name": "Tropicana Cookies",
+    "type": "Sativa",
+    "qualification": "4.5",
+    "substance": "Caryophyllene",
+    "topEffect": "orange",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 16%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "orange",
+      "tropical",
+      "citrus"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "uplifted",
+        "happy"
+      ],
+      "_Negatives": [
+        "anxious",
+        "paranoid",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Lava Cake",
+    "type": "Hybrid",
+    "qualification": "4.5",
+    "substance": "Caryophyllene",
+    "topEffect": "mint",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 22%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "mint",
+      "pepper",
+      "vanilla"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "hungry",
+        "sleepy"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "paranoid",
+        "headache"
+      ]
+    }
+  },
+  {
+    "name": "SFV OG",
+    "type": "Hybrid",
+    "qualification": "4.4",
+    "substance": "Myrcene",
+    "topEffect": "pine",
+    "aroma": "focused",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "pine",
+      "lemon",
+      "spicy/herbal"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "focused",
+        "energetic",
+        "uplifted"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Bubble Gum",
+    "type": "Hybrid",
+    "qualification": "4.1",
+    "substance": "Caryophyllene",
+    "topEffect": "sweet",
+    "aroma": "happy",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "sweet",
+      "flowery",
+      "berry"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "happy",
+        "hungry",
+        "euphoric"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "dry mouth",
+        "headache"
+      ]
+    }
+  },
+  {
+    "name": "Strawberry Banana",
+    "type": "Hybrid",
+    "qualification": "4.5",
+    "substance": "Limonene",
+    "topEffect": "strawberry",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "strawberry",
+      "tree fruit",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "happy",
+        "hungry"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "anxious",
+        "dry mouth"
+      ]
+    }
+  },
+  {
+    "name": "White Truffle",
+    "type": "Hybrid",
+    "qualification": "4.7",
+    "substance": "Limonene",
+    "topEffect": "butter",
+    "aroma": "tingly",
+    "_cannabinoides": [
+      "THC 25%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "butter",
+      "nutty",
+      "skunk"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "tingly",
+        "relaxed",
+        "aroused"
+      ],
+      "_Negatives": [
+        "headache",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Trainwreck",
+    "type": "Hybrid",
+    "qualification": "4.2",
+    "substance": "Terpinolene",
+    "topEffect": "pine",
+    "aroma": "euphoric",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "pine",
+      "spicy/herbal",
+      "lemon"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "euphoric",
+        "energetic",
+        "creative"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Super Silver Haze",
+    "type": "Sativa",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "spicy/herbal",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "spicy/herbal",
+      "citrus",
+      "skunk"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "uplifted",
+        "creative"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry eyes",
+        "dry mouth"
+      ]
+    }
+  },
+  {
+    "name": "Grease Monkey",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "diesel",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 22%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "diesel",
+      "pungent",
+      "skunk"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "hungry"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "anxious",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Purple Haze",
+    "type": "Sativa",
+    "qualification": "4.2",
+    "substance": "Myrcene",
+    "topEffect": "lavender",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 16%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "lavender",
+      "berry",
+      "grape"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "creative",
+        "talkative"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry mouth",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Maui Wowie",
+    "type": "Sativa",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "tropical",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "tropical",
+      "pineapple",
+      "mango"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "uplifted",
+        "happy"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "dry mouth",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "LA Kush Cake",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "vanilla",
+    "aroma": "aroused",
+    "_cannabinoides": [
+      "THC 23%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "mint",
+      "pepper"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "aroused",
+        "relaxed",
+        "sleepy"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "anxious",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Zookies",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "nutty",
+    "aroma": "focused",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "nutty",
+      "pepper",
+      "diesel"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "focused",
+        "relaxed",
+        "giggly"
+      ],
+      "_Negatives": [
+        "anxious",
+        "dizzy",
+        "headache"
+      ]
+    }
+  },
+  {
+    "name": "Grape Ape",
+    "type": "Indica",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "grape",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "grape",
+      "berry",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "hungry",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Jealousy",
+    "type": "Hybrid",
+    "qualification": "4.8",
+    "substance": "Caryophyllene",
+    "topEffect": "pepper",
+    "aroma": "giggly",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "pepper",
+      "earthy",
+      "plum"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "giggly",
+        "relaxed",
+        "talkative"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "headache",
+        "anxious"
+      ]
+    }
+  },
+  {
+    "name": "Jet Fuel",
+    "type": "Hybrid",
+    "qualification": "4.5",
+    "substance": "Limonene",
+    "topEffect": "diesel",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "diesel",
+      "pungent",
+      "chemical"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "uplifted",
+        "focused"
+      ],
+      "_Negatives": [
+        "anxious",
+        "paranoid",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Blue Cheese",
+    "type": "Indica",
+    "qualification": "4.2",
+    "substance": "Myrcene",
+    "topEffect": "blue cheese",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "blue cheese",
+      "cheese",
+      "blueberry"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "hungry",
+        "giggly"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Mendo Breath",
+    "type": "Indica",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "vanilla",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "earthy",
+      "pepper"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "tingly"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "anxious",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Tahoe OG",
+    "type": "Hybrid",
+    "qualification": "4.4",
+    "substance": "Myrcene",
+    "topEffect": "pine",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "pine",
+      "lemon",
+      "woody"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "hungry",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Birthday Cake",
+    "type": "Hybrid",
+    "qualification": "4.5",
+    "substance": "Caryophyllene",
+    "topEffect": "vanilla",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "sweet",
+      "butter"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "hungry",
+        "sleepy"
+      ],
+      "_Negatives": [
+        "anxious",
+        "paranoid",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Banana Kush",
+    "type": "Hybrid",
+    "qualification": "4.2",
+    "substance": "Limonene",
+    "topEffect": "tree fruit",
+    "aroma": "talkative",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "tree fruit",
+      "tropical",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "talkative",
+        "giggly",
+        "sleepy"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Alien OG",
+    "type": "Hybrid",
+    "qualification": "4.4",
+    "substance": "Myrcene",
+    "topEffect": "pine",
+    "aroma": "euphoric",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "pine",
+      "lemon",
+      "earthy"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "euphoric",
+        "hungry",
+        "giggly"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry eyes",
+        "headache"
+      ]
+    }
+  },
+  {
+    "name": "Ghost Train Haze",
+    "type": "Sativa",
+    "qualification": "4.5",
+    "substance": "Terpinolene",
+    "topEffect": "citrus",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBG 2%"
+    ],
+    "_Flavors": [
+      "citrus",
+      "spicy/herbal",
+      "lemon"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "uplifted",
+        "focused"
+      ],
+      "_Negatives": [
+        "anxious",
+        "paranoid",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Dolato",
+    "type": "Indica",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "lavender",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "lavender",
+      "tar",
+      "tobacco"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "tingly",
+        "sleepy"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "dry mouth",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Thin Mint",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "mint",
+    "aroma": "uplifted",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "mint",
+      "menthol",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "uplifted",
+        "euphoric",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "paranoid",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Animal Cookies",
+    "type": "Hybrid",
+    "qualification": "4.5",
+    "substance": "Caryophyllene",
+    "topEffect": "sweet",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "sweet",
+      "pungent",
+      "vanilla"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "sleepy",
+        "hungry"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry mouth",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "FPOG",
+    "type": "Hybrid",
+    "qualification": "4.4",
+    "substance": "Myrcene",
+    "topEffect": "tropical",
+    "aroma": "giggly",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "tropical",
+      "berry",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "giggly",
+        "happy",
+        "uplifted"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "King Louis",
+    "type": "Indica",
+    "qualification": "4.6",
+    "substance": "Myrcene",
+    "topEffect": "pine",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "pine",
+      "woody",
+      "spicy/herbal"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "hungry"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Alaskan Thunder Fuck",
+    "type": "Sativa",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "menthol",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 16%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "menthol",
+      "pine",
+      "sage"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "talkative",
+        "uplifted"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Acapulco Gold",
+    "type": "Sativa",
+    "qualification": "4.5",
+    "substance": "Myrcene",
+    "topEffect": "coffee",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "coffee",
+      "honey",
+      "woody"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "creative",
+        "uplifted"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "paranoid",
+        "headache"
+      ]
+    }
+  },
+  {
+    "name": "Mandarin Cookies",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "orange",
+    "aroma": "uplifted",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "orange",
+      "citrus",
+      "pepper"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "uplifted",
+        "talkative",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "headache",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Georgia Pie",
+    "type": "Hybrid",
+    "qualification": "4.7",
+    "substance": "Caryophyllene",
+    "topEffect": "peach",
+    "aroma": "uplifted",
+    "_cannabinoides": [
+      "THC 24%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "peach",
+      "apricot",
+      "tree fruit"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "uplifted",
+        "happy",
+        "hungry"
+      ],
+      "_Negatives": [
+        "headache",
+        "paranoid",
+        "anxious"
+      ]
+    }
+  },
+  {
+    "name": "Jungle Cake",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Myrcene",
+    "topEffect": "vanilla",
+    "aroma": "talkative",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "pepper",
+      "butter"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "talkative",
+        "giggly",
+        "happy"
+      ],
+      "_Negatives": [
+        "dizzy",
+        "paranoid",
+        "anxious"
+      ]
+    }
+  },
+  {
+    "name": "Gelonade",
+    "type": "Hybrid",
+    "qualification": "4.5",
+    "substance": "Terpinolene",
+    "topEffect": "lemon",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 25%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "lemon",
+      "citrus",
+      "pepper"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "uplifted",
+        "talkative"
+      ],
+      "_Negatives": [
+        "headache",
+        "paranoid",
+        "anxious"
+      ]
+    }
+  },
+  {
+    "name": "Candyland",
+    "type": "Sativa",
+    "qualification": "4.5",
+    "substance": "Caryophyllene",
+    "topEffect": "sweet",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "sweet",
+      "spicy/herbal",
+      "honey"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "uplifted",
+        "talkative"
+      ],
+      "_Negatives": [
+        "anxious",
+        "dry eyes",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Purple Kush",
+    "type": "Indica",
+    "qualification": "4.2",
+    "substance": "Myrcene",
+    "topEffect": "grape",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "grape",
+      "violet",
+      "lavender"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "hungry",
+        "giggly"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Blueberry Muffin",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "blueberry",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "blueberry",
+      "butter",
+      "vanilla"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "tingly",
+        "happy"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dizzy",
+        "headache"
+      ]
+    }
+  },
+  {
+    "name": "Ice Cream",
+    "type": "Hybrid",
+    "qualification": "4.2",
+    "substance": "Myrcene",
+    "topEffect": "vanilla",
+    "aroma": "hungry",
+    "_cannabinoides": [
+      "THC 18%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "sweet",
+      "honey"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "hungry",
+        "sleepy",
+        "aroused"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dizzy",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Cookies Kush",
+    "type": "Indica",
+    "qualification": "4.5",
+    "substance": "Limonene",
+    "topEffect": "sweet",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "sweet",
+      "mint",
+      "pungent"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "hungry"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "dizzy",
+        "dry mouth"
+      ]
+    }
+  },
+  {
+    "name": "Guava",
+    "type": "Sativa",
+    "qualification": "4.5",
+    "substance": "Caryophyllene",
+    "topEffect": "blue cheese",
+    "aroma": "uplifted",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "tropical",
+      "pepper"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "uplifted",
+        "hungry",
+        "sleepy"
+      ],
+      "_Negatives": [
+        "anxious",
+        "dry mouth",
+        "blue cheese"
+      ]
+    }
+  },
+  {
+    "name": "Gelato Cake",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Limonene",
+    "topEffect": "vanilla",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "vanilla",
+      "butter",
+      "berry"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "hungry"
+      ],
+      "_Negatives": [
+        "anxious",
+        "paranoid",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Motorbreath",
+    "type": "Hybrid",
+    "qualification": "4.7",
+    "substance": "Myrcene",
+    "topEffect": "diesel",
+    "aroma": "euphoric",
+    "_cannabinoides": [
+      "THC 25%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "diesel",
+      "chemical",
+      "pepper"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "euphoric",
+        "relaxed",
+        "happy"
+      ],
+      "_Negatives": [
+        "anxious",
+        "paranoid",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Tangie",
+    "type": "Sativa",
+    "qualification": "4.4",
+    "substance": "Myrcene",
+    "topEffect": "orange",
+    "aroma": "energetic",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "orange",
+      "citrus",
+      "tropical"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "energetic",
+        "uplifted",
+        "creative"
+      ],
+      "_Negatives": [
+        "anxious",
+        "headache",
+        "dry mouth"
+      ]
+    }
+  },
+  {
+    "name": "Platinum OG",
+    "type": "Indica",
+    "qualification": "4.4",
+    "substance": "Myrcene",
+    "topEffect": "pine",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 19%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "pine",
+      "pungent",
+      "coffee"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "hungry"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "dry eyes",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Platinum Cookies",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Caryophyllene",
+    "topEffect": "sweet",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "sweet",
+      "mint",
+      "pungent"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "euphoric",
+        "hungry"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "paranoid",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Black Diamond",
+    "type": "Indica",
+    "qualification": "4.4",
+    "substance": "Myrcene",
+    "topEffect": "berry",
+    "aroma": "hungry",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "berry",
+      "earthy",
+      "woody"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "hungry",
+        "giggly",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "paranoid",
+        "dry mouth",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Horchata",
+    "type": "Hybrid",
+    "qualification": "4.7",
+    "substance": "Caryophyllene",
+    "topEffect": "vanilla",
+    "aroma": "relaxed",
+    "_cannabinoides": [
+      "THC 25%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "earthy"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "relaxed",
+        "talkative",
+        "focused"
+      ],
+      "_Negatives": [
+        "dry mouth",
+        "vanilla",
+        "coffee"
+      ]
+    }
+  },
+  {
+    "name": "Mochi",
+    "type": "Hybrid",
+    "qualification": "4.6",
+    "substance": "Myrcene",
+    "topEffect": "mint",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 10%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "mint",
+      "vanilla",
+      "flowery"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "relaxed",
+        "hungry"
+      ],
+      "_Negatives": [
+        "anxious",
+        "paranoid",
+        "dry eyes"
+      ]
+    }
+  },
+  {
+    "name": "Papaya",
+    "type": "Indica",
+    "qualification": "4.3",
+    "substance": "Myrcene",
+    "topEffect": "mango",
+    "aroma": "sleepy",
+    "_cannabinoides": [
+      "THC 17%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "mango",
+      "tropical",
+      "tree fruit"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "sleepy",
+        "hungry",
+        "relaxed"
+      ],
+      "_Negatives": [
+        "dizzy",
+        "dry mouth",
+        "paranoid"
+      ]
+    }
+  },
+  {
+    "name": "Fire OG",
+    "type": "Hybrid",
+    "qualification": "4.4",
+    "substance": "Myrcene",
+    "topEffect": "lemon",
+    "aroma": "hungry",
+    "_cannabinoides": [
+      "THC 20%",
+      "CBD 0%"
+    ],
+    "_Flavors": [
+      "lemon",
+      "spicy/herbal",
+      "pine"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "hungry",
+        "sleepy",
+        "euphoric"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "dry mouth",
+        "dizzy"
+      ]
+    }
+  },
+  {
+    "name": "Mango Kush",
+    "type": "Hybrid",
+    "qualification": "4.2",
+    "substance": "Myrcene",
+    "topEffect": "mango",
+    "aroma": "giggly",
+    "_cannabinoides": [
+      "THC 21%",
+      "CBG 1%"
+    ],
+    "_Flavors": [
+      "mango",
+      "tropical",
+      "sweet"
+    ],
+    "Effects": {
+      "_Feelings": [
+        "giggly",
+        "hungry",
+        "talkative"
+      ],
+      "_Negatives": [
+        "dry eyes",
+        "dry mouth",
+        "paranoid"
+      ]
+    }
+  }
+]

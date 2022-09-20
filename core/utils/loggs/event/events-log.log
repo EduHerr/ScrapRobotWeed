@@ -1,0 +1,590 @@
+{
+  message: 'URI visited: https://www.leafly.com/strains URI visited: https://www.leafly.com/strains',
+  timestamp: '2022-9-19 12:49:58',
+  level: 'info'
+}
+{
+  message: 'URI visited: https://www.leafly.com/strains?page=2 URI visited: https://www.leafly.com/strains?page=2',
+  timestamp: '2022-9-19 12:51:23',
+  level: 'info'
+}
+{
+  message: 'URI visited: https://www.leafly.com/strains?page=3 URI visited: https://www.leafly.com/strains?page=3',
+  timestamp: '2022-9-19 12:52:53',
+  level: 'info'
+}
+{
+  message: 'URI visited: https://www.leafly.com/strains?page=4 URI visited: https://www.leafly.com/strains?page=4',
+  timestamp: '2022-9-19 12:54:57',
+  level: 'info'
+}
+{
+  message: 'URI visited: https://www.leafly.com/strains?page=5 URI visited: https://www.leafly.com/strains?page=5',
+  timestamp: '2022-9-19 12:55:37',
+  level: 'info'
+}
+{
+  message: 'URI visited: https://www.leafly.com/strains?page=6 URI visited: https://www.leafly.com/strains?page=6',
+  timestamp: '2022-9-19 12:56:12',
+  level: 'info'
+}
+{
+  message: 'Scrapping end Scrapping end',
+  timestamp: '2022-9-19 12:56:48',
+  level: 'info'
+}
+{
+  message: 'ScrapperData gets to the end ScrapperData gets to the end',
+  timestamp: '2022-9-19 12:56:50',
+  level: 'info'
+}
+{
+  message: 'Backsource from dataScrapped, generated successfully Backsource from dataScrapped, generated successfully',
+  timestamp: '2022-9-19 12:56:50',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:13',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:32',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:32',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:32',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:32',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:32',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:32',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:32',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:33',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:33',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:33',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:33',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:33',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:33',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:33',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:33',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:33',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:34',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:35',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:35',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:35',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:35',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:35',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:35',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:35',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:35',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:35',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:35',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:35',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:36',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:37',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:37',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:37',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:37',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:37',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:37',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:37',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:37',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:37',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:37',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:37',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:38',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:38',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:38',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:38',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:38',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:38',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:38',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:38',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:38',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:38',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:38',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:39',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:39',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:39',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:39',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:39',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:39',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:39',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:39',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:39',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:39',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:39',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:40',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:40',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:40',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:40',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:40',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:40',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:40',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:40',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:40',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:40',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:40',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:41',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:41',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:41',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:41',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:41',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:41',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:41',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:41',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:41',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:41',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:41',
+  level: 'info'
+}
+{
+  message: 'Data guardada en la bd!! Data guardada en la bd!!',
+  timestamp: '2022-9-19 13:54:42',
+  level: 'info'
+}
+{
+  message: 'Backsource CSV, generated successfully Backsource CSV, generated successfully',
+  timestamp: '2022-9-19 14:25:52',
+  level: 'info'
+}

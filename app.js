@@ -9,10 +9,10 @@ const server = http.createServer(application);
 
 //@settings
 application.set('port', process.env.PORT); //Puerto de escucha
-application.use('/backsource', express.static(path.join(__dirname, '/src/backsource')));
+application.use('/backsource', express.static(path.join(__dirname, '/core/src/backsource')));
 
 //@Routes configuration
-const routes = require('./src/routes/routes.js');
+const routes = require('./core/src/routes/routes.js');
 application.use('/api', routes);
 
 //@Arranque
