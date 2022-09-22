@@ -588,3 +588,8 @@
   timestamp: '2022-9-19 14:25:52',
   level: 'info'
 }
+{
+  message: 'URI visited: https://www.leafly.com/strains URI visited: https://www.leafly.com/strains',
+  timestamp: '2022-9-20 15:30:03',
+  level: 'info'
+}
