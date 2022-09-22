@@ -4,6 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "build": "npm install --prefix client && npm run build --prefix client",
     "client": "npm run dev --prefix client",
     "server": "nodemon app.js --ignore 'client/'",
     "dev": "concurrently \"npm run server\" \"npm run client\""
